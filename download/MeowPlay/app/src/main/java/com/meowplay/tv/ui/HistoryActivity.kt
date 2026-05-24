@@ -24,14 +24,6 @@ import com.meowplay.tv.data.HistoryRepository
 import com.meowplay.tv.player.PlayerActivity
 import kotlinx.coroutines.launch
 
-/**
- * History screen — TV-optimized with D-pad navigation.
- * Shows all previously played links with:
- * - Click to play with resume
- * - Copy button
- * - Long-press for "Open with"
- * - Search
- */
 class HistoryActivity : FragmentActivity() {
 
     private lateinit var searchInput: EditText
@@ -64,19 +56,11 @@ class HistoryActivity : FragmentActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
 
-        // D-pad focus chain
-        backBtn.nextFocusDownId = R.id.search_input
-        searchInput.nextFocusDownId = R.id.history_recycler
-        clearAllBtn.nextFocusDownId = R.id.history_recycler
-
-        // Back button
         backBtn.setOnClickListener { finish() }
 
-        // Clear all
         clearAllBtn.setOnClickListener {
             android.app.AlertDialog.Builder(this)
                 .setTitle("Clear All History?")
-                .setMessage("This will remove all links from your history.")
                 .setPositiveButton("Clear All") { _, _ ->
                     lifecycleScope.launch { historyRepository.clearAll() }
                 }
@@ -84,24 +68,22 @@ class HistoryActivity : FragmentActivity() {
                 .show()
         }
 
-        // Search
         searchInput.addTextChangedListener(object : android.text.TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 val q = s?.toString()?.trim() ?: ""
-                if (q.isEmpty()) {
-                    historyRepository.observeAll().collectSafely { updateList(it) }
-                } else {
-                    historyRepository.search(q).collectSafely { updateList(it) }
+                lifecycleScope.launch {
+                    val entries = if (q.isEmpty()) historyRepository.observeAll()
+                    else historyRepository.search(q)
+                    entries.collect { list -> runOnUiThread { updateList(list) } }
                 }
             }
             override fun afterTextChanged(s: android.text.Editable?) {}
         })
 
-        // Observe history
         lifecycleScope.launch {
             historyRepository.observeAll().collect { entries ->
-                updateList(entries)
+                runOnUiThread { updateList(entries) }
             }
         }
     }
@@ -115,11 +97,6 @@ class HistoryActivity : FragmentActivity() {
             recyclerView.visibility = View.VISIBLE
             adapter.submitList(entries)
         }
-    }
-
-    // Extension to safely collect Flow
-    private fun <T> kotlinx.coroutines.flow.Flow<T>.collectSafely(action: (T) -> Unit) {
-        lifecycleScope.launch { collect { action(it) } }
     }
 
     private fun playWithResume(entry: HistoryEntry) {
@@ -152,13 +129,10 @@ class HistoryActivity : FragmentActivity() {
         lifecycleScope.launch { historyRepository.delete(entry) }
     }
 
-    // D-pad key handling
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
         if (keyCode == KeyEvent.KEYCODE_BACK) { finish(); return true }
         return super.onKeyDown(keyCode, event)
     }
-
-    // ─── Adapter ──────────────────────────────────────────────────────────────
 
     class HistoryAdapter(
         private val onPlay: (HistoryEntry) -> Unit,
@@ -200,23 +174,26 @@ class HistoryActivity : FragmentActivity() {
                     resumeText.visibility = View.GONE
                 }
 
-                // D-pad focus
+                // D-pad focus with glass effect
                 itemView.isFocusable = true
+                itemView.isClickable = true
                 itemView.setOnFocusChangeListener { v, hasFocus ->
-                    v.setBackgroundColor(if (hasFocus) 0x1A237E.toInt() else 0x1E1E1E.toInt())
+                    val bg = android.graphics.drawable.GradientDrawable().apply {
+                        setColor(if (hasFocus) 0x2D2D5E else 0xFF1A1A2E.toInt())
+                        cornerRadius = 12f
+                        if (hasFocus) setStroke(2, 0x40FFFFFF.toInt())
+                    }
+                    v.background = bg
                 }
 
-                // Click = Play
+                // Click = Play (D-pad center)
                 itemView.setOnClickListener { onPlay(entry) }
 
                 // Long click = Open with
                 itemView.setOnLongClickListener { onOpenWith(entry); true }
 
-                // Copy button
                 copyBtn.setOnClickListener { onCopy(entry) }
                 copyBtn.isFocusable = true
-
-                // Delete
                 deleteBtn.setOnClickListener { onDelete(entry) }
                 deleteBtn.isFocusable = true
             }

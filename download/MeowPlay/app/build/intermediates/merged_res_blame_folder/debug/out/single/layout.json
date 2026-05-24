@@ -1,22 +1,58 @@
 [
     {
-        "merged": "com.meowplay.tv.app-mergeDebugResources-48:/layout/activity_player.xml",
-        "source": "com.meowplay.tv.app-main-51:/layout/activity_player.xml"
+        "merged": "com.meowplay.tv.app-mergeDebugResources-49:/layout/activity_player.xml",
+        "source": "com.meowplay.tv.app-main-52:/layout/activity_player.xml"
     },
     {
-        "merged": "com.meowplay.tv.app-mergeDebugResources-48:/layout/activity_paste_link.xml",
-        "source": "com.meowplay.tv.app-main-51:/layout/activity_paste_link.xml"
+        "merged": "com.meowplay.tv.app-mergeDebugResources-49:/layout/activity_cache_manager.xml",
+        "source": "com.meowplay.tv.app-main-52:/layout/activity_cache_manager.xml"
     },
     {
-        "merged": "com.meowplay.tv.app-mergeDebugResources-48:/layout/activity_history.xml",
-        "source": "com.meowplay.tv.app-main-51:/layout/activity_history.xml"
+        "merged": "com.meowplay.tv.app-mergeDebugResources-49:/layout/activity_about.xml",
+        "source": "com.meowplay.tv.app-main-52:/layout/activity_about.xml"
     },
     {
-        "merged": "com.meowplay.tv.app-mergeDebugResources-48:/layout/item_history.xml",
-        "source": "com.meowplay.tv.app-main-51:/layout/item_history.xml"
+        "merged": "com.meowplay.tv.app-mergeDebugResources-49:/layout/item_history.xml",
+        "source": "com.meowplay.tv.app-main-52:/layout/item_history.xml"
     },
     {
-        "merged": "com.meowplay.tv.app-mergeDebugResources-48:/layout/activity_main.xml",
-        "source": "com.meowplay.tv.app-main-51:/layout/activity_main.xml"
+        "merged": "com.meowplay.tv.app-mergeDebugResources-49:/layout/dialog_user_agent.xml",
+        "source": "com.meowplay.tv.app-main-52:/layout/dialog_user_agent.xml"
+    },
+    {
+        "merged": "com.meowplay.tv.app-mergeDebugResources-49:/layout/activity_history.xml",
+        "source": "com.meowplay.tv.app-main-52:/layout/activity_history.xml"
+    },
+    {
+        "merged": "com.meowplay.tv.app-mergeDebugResources-49:/layout/dialog_track_selection.xml",
+        "source": "com.meowplay.tv.app-main-52:/layout/dialog_track_selection.xml"
+    },
+    {
+        "merged": "com.meowplay.tv.app-mergeDebugResources-49:/layout/activity_settings.xml",
+        "source": "com.meowplay.tv.app-main-52:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "com.meowplay.tv.app-mergeDebugResources-49:/layout/item_cache_setting.xml",
+        "source": "com.meowplay.tv.app-main-52:/layout/item_cache_setting.xml"
+    },
+    {
+        "merged": "com.meowplay.tv.app-mergeDebugResources-49:/layout/dialog_audio_delay.xml",
+        "source": "com.meowplay.tv.app-main-52:/layout/dialog_audio_delay.xml"
+    },
+    {
+        "merged": "com.meowplay.tv.app-mergeDebugResources-49:/layout/item_settings_category.xml",
+        "source": "com.meowplay.tv.app-main-52:/layout/item_settings_category.xml"
+    },
+    {
+        "merged": "com.meowplay.tv.app-mergeDebugResources-49:/layout/activity_main.xml",
+        "source": "com.meowplay.tv.app-main-52:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.meowplay.tv.app-mergeDebugResources-49:/layout/activity_paste_link.xml",
+        "source": "com.meowplay.tv.app-main-52:/layout/activity_paste_link.xml"
+    },
+    {
+        "merged": "com.meowplay.tv.app-mergeDebugResources-49:/layout/dialog_exit_confirm.xml",
+        "source": "com.meowplay.tv.app-main-52:/layout/dialog_exit_confirm.xml"
     }
 ]

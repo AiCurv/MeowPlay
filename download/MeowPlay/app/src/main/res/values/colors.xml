@@ -2,11 +2,13 @@
 <resources>
     <color name="accent_purple">#BB86FC</color>
     <color name="accent_purple_dark">#7C4DFF</color>
-    <color name="background_dark">#121212</color>
-    <color name="surface_dark">#1E1E1E</color>
-    <color name="surface_light">#2D2D2D</color>
+    <color name="background_dark">#0D0D0D</color>
+    <color name="surface_dark">#1A1A2E</color>
+    <color name="surface_light">#2D2D5E</color>
+    <color name="glass_border">#40FFFFFF</color>
     <color name="text_primary">#FFFFFF</color>
     <color name="text_secondary">#B0B0B0</color>
     <color name="text_hint">#808080</color>
     <color name="error_red">#CF6679</color>
+    <color name="overlay_background">#99000000</color>
 </resources>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.meowplay.tv.debug"
-    android:versionCode="2"
-    android:versionName="1.1.0-debug" >
+    android:versionCode="3"
+    android:versionName="1.2.0-debug" >
 
     <uses-sdk
         android:minSdkVersion="21"
@@ -11,6 +11,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
 
     <!-- Android TV support -->
     <uses-feature
@@ -65,7 +68,7 @@
             android:screenOrientation="landscape"
             android:theme="@style/Theme.MeowPlay.Player" >
 
-            <!-- ACTION_VIEW with video/* MIME type (Stremio, CloudStream, etc.) -->
+            <!-- ACTION_VIEW with video/* MIME type -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -78,7 +81,7 @@
                 <data android:mimeType="video/*" />
             </intent-filter>
 
-            <!-- ACTION_VIEW without MIME type (some apps don't set it) -->
+            <!-- ACTION_VIEW without MIME type -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -89,7 +92,7 @@
                 <data android:scheme="https" />
             </intent-filter>
 
-            <!-- M3U8 / HLS specific -->
+            <!-- M3U8 / HLS -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -102,7 +105,7 @@
                 <data android:mimeType="application/vnd.apple.mpegurl" />
             </intent-filter>
 
-            <!-- Shared text (URL from other apps) -->
+            <!-- Shared text -->
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
 
@@ -130,6 +133,24 @@
                 <data android:scheme="magnet" />
             </intent-filter>
         </activity>
+
+        <!-- Settings Activity -->
+        <activity
+            android:name="com.meowplay.tv.ui.SettingsActivity"
+            android:exported="false"
+            android:parentActivityName="com.meowplay.tv.MainActivity" />
+
+        <!-- Cache Manager Activity -->
+        <activity
+            android:name="com.meowplay.tv.ui.CacheManagerActivity"
+            android:exported="false"
+            android:parentActivityName="com.meowplay.tv.MainActivity" />
+
+        <!-- About Activity -->
+        <activity
+            android:name="com.meowplay.tv.ui.AboutActivity"
+            android:exported="false"
+            android:parentActivityName="com.meowplay.tv.MainActivity" />
 
         <!-- History Activity -->
         <activity

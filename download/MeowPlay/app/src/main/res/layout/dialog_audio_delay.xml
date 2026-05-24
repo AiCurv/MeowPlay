@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#E61A1A2E"
+    android:padding="24dp"
+    android:minWidth="400dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Audio Delay (A/V Sync)"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adjust audio from -500ms to +500ms"
+        android:textColor="#B0B0B0"
+        android:textSize="13sp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/txt_delay_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0ms"
+        android:textColor="#BB86FC"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp" />
+
+    <SeekBar
+        android:id="@+id/seek_bar_delay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="1000"
+        android:progress="500"
+        android:progressTint="#BB86FC"
+        android:thumbTint="#BB86FC"
+        android:layout_marginBottom="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="-500ms"
+            android:textColor="#808080"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0ms"
+            android:textColor="#808080"
+            android:textSize="12sp"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="+500ms"
+            android:textColor="#808080"
+            android:textSize="12sp"
+            android:gravity="end" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_apply_delay"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Apply"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/bg_btn_primary"
+        android:focusable="true"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

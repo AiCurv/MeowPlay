@@ -5,6 +5,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
 
     <!-- Android TV support -->
     <uses-feature android:name="android.software.leanback" android:required="false" />
@@ -44,7 +46,7 @@
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
             android:theme="@style/Theme.MeowPlay.Player">
 
-            <!-- ACTION_VIEW with video/* MIME type (Stremio, CloudStream, etc.) -->
+            <!-- ACTION_VIEW with video/* MIME type -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -55,7 +57,7 @@
                 <data android:mimeType="video/*" />
             </intent-filter>
 
-            <!-- ACTION_VIEW without MIME type (some apps don't set it) -->
+            <!-- ACTION_VIEW without MIME type -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -64,7 +66,7 @@
                 <data android:scheme="https" />
             </intent-filter>
 
-            <!-- M3U8 / HLS specific -->
+            <!-- M3U8 / HLS -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -75,7 +77,7 @@
                 <data android:mimeType="application/vnd.apple.mpegurl" />
             </intent-filter>
 
-            <!-- Shared text (URL from other apps) -->
+            <!-- Shared text -->
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -97,6 +99,24 @@
                 <data android:scheme="magnet" />
             </intent-filter>
         </activity>
+
+        <!-- Settings Activity -->
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Cache Manager Activity -->
+        <activity
+            android:name=".ui.CacheManagerActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- About Activity -->
+        <activity
+            android:name=".ui.AboutActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
 
         <!-- History Activity -->
         <activity

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#E61A1A2E"
+    android:padding="24dp"
+    android:minWidth="400dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User-Agent String"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Custom User-Agent for HTTP requests"
+        android:textColor="#B0B0B0"
+        android:textSize="13sp"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/edit_user_agent"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#808080"
+        android:background="@drawable/bg_input_focus"
+        android:padding="12dp"
+        android:singleLine="true"
+        android:inputType="text"
+        android:hint="MeowPlay/1.2"
+        android:focusable="true"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btn_apply_ua"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Apply"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/bg_btn_primary"
+        android:focusable="true" />
+</LinearLayout>

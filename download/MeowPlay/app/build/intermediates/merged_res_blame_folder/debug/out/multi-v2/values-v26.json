@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.meowplay.tv.app-mergeDebugResources-47:/values-v26/values-v26.xml",
+            "outputFile": "com.meowplay.tv.app-mergeDebugResources-48:/values-v26/values-v26.xml",
             "map": [
                 {
                     "source": "/home/z/.gradle/caches/transforms-3/5c5f7c6de7640bef4d5fdbb070566b52/transformed/appcompat-1.6.1/res/values-v26/values-v26.xml",

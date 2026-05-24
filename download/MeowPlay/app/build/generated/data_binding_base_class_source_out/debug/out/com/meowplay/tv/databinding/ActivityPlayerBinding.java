@@ -5,7 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,7 +25,46 @@ public final class ActivityPlayerBinding implements ViewBinding {
   private final FrameLayout rootView;
 
   @NonNull
+  public final ImageButton btnAspectRatio;
+
+  @NonNull
+  public final ImageButton btnAudioTrack;
+
+  @NonNull
+  public final ImageButton btnBack;
+
+  @NonNull
+  public final ImageButton btnInfo;
+
+  @NonNull
+  public final ImageButton btnPip;
+
+  @NonNull
+  public final ImageButton btnPlayPause;
+
+  @NonNull
+  public final ImageButton btnQuality;
+
+  @NonNull
+  public final ImageButton btnSeekBack;
+
+  @NonNull
+  public final ImageButton btnSeekForward;
+
+  @NonNull
+  public final ImageButton btnSpeed;
+
+  @NonNull
+  public final ImageButton btnSubtitle;
+
+  @NonNull
+  public final LinearLayout controlsOverlay;
+
+  @NonNull
   public final TextView errorText;
+
+  @NonNull
+  public final LinearLayout infoOverlay;
 
   @NonNull
   public final ProgressBar loadingIndicator;
@@ -30,12 +72,53 @@ public final class ActivityPlayerBinding implements ViewBinding {
   @NonNull
   public final PlayerView playerView;
 
-  private ActivityPlayerBinding(@NonNull FrameLayout rootView, @NonNull TextView errorText,
-      @NonNull ProgressBar loadingIndicator, @NonNull PlayerView playerView) {
+  @NonNull
+  public final SeekBar seekBar;
+
+  @NonNull
+  public final TextView txtCurrentTime;
+
+  @NonNull
+  public final TextView txtDuration;
+
+  @NonNull
+  public final TextView txtTitle;
+
+  @NonNull
+  public final TextView txtVideoInfo;
+
+  private ActivityPlayerBinding(@NonNull FrameLayout rootView, @NonNull ImageButton btnAspectRatio,
+      @NonNull ImageButton btnAudioTrack, @NonNull ImageButton btnBack,
+      @NonNull ImageButton btnInfo, @NonNull ImageButton btnPip, @NonNull ImageButton btnPlayPause,
+      @NonNull ImageButton btnQuality, @NonNull ImageButton btnSeekBack,
+      @NonNull ImageButton btnSeekForward, @NonNull ImageButton btnSpeed,
+      @NonNull ImageButton btnSubtitle, @NonNull LinearLayout controlsOverlay,
+      @NonNull TextView errorText, @NonNull LinearLayout infoOverlay,
+      @NonNull ProgressBar loadingIndicator, @NonNull PlayerView playerView,
+      @NonNull SeekBar seekBar, @NonNull TextView txtCurrentTime, @NonNull TextView txtDuration,
+      @NonNull TextView txtTitle, @NonNull TextView txtVideoInfo) {
     this.rootView = rootView;
+    this.btnAspectRatio = btnAspectRatio;
+    this.btnAudioTrack = btnAudioTrack;
+    this.btnBack = btnBack;
+    this.btnInfo = btnInfo;
+    this.btnPip = btnPip;
+    this.btnPlayPause = btnPlayPause;
+    this.btnQuality = btnQuality;
+    this.btnSeekBack = btnSeekBack;
+    this.btnSeekForward = btnSeekForward;
+    this.btnSpeed = btnSpeed;
+    this.btnSubtitle = btnSubtitle;
+    this.controlsOverlay = controlsOverlay;
     this.errorText = errorText;
+    this.infoOverlay = infoOverlay;
     this.loadingIndicator = loadingIndicator;
     this.playerView = playerView;
+    this.seekBar = seekBar;
+    this.txtCurrentTime = txtCurrentTime;
+    this.txtDuration = txtDuration;
+    this.txtTitle = txtTitle;
+    this.txtVideoInfo = txtVideoInfo;
   }
 
   @Override
@@ -65,9 +148,87 @@ public final class ActivityPlayerBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btn_aspect_ratio;
+      ImageButton btnAspectRatio = ViewBindings.findChildViewById(rootView, id);
+      if (btnAspectRatio == null) {
+        break missingId;
+      }
+
+      id = R.id.btn_audio_track;
+      ImageButton btnAudioTrack = ViewBindings.findChildViewById(rootView, id);
+      if (btnAudioTrack == null) {
+        break missingId;
+      }
+
+      id = R.id.btn_back;
+      ImageButton btnBack = ViewBindings.findChildViewById(rootView, id);
+      if (btnBack == null) {
+        break missingId;
+      }
+
+      id = R.id.btn_info;
+      ImageButton btnInfo = ViewBindings.findChildViewById(rootView, id);
+      if (btnInfo == null) {
+        break missingId;
+      }
+
+      id = R.id.btn_pip;
+      ImageButton btnPip = ViewBindings.findChildViewById(rootView, id);
+      if (btnPip == null) {
+        break missingId;
+      }
+
+      id = R.id.btn_play_pause;
+      ImageButton btnPlayPause = ViewBindings.findChildViewById(rootView, id);
+      if (btnPlayPause == null) {
+        break missingId;
+      }
+
+      id = R.id.btn_quality;
+      ImageButton btnQuality = ViewBindings.findChildViewById(rootView, id);
+      if (btnQuality == null) {
+        break missingId;
+      }
+
+      id = R.id.btn_seek_back;
+      ImageButton btnSeekBack = ViewBindings.findChildViewById(rootView, id);
+      if (btnSeekBack == null) {
+        break missingId;
+      }
+
+      id = R.id.btn_seek_forward;
+      ImageButton btnSeekForward = ViewBindings.findChildViewById(rootView, id);
+      if (btnSeekForward == null) {
+        break missingId;
+      }
+
+      id = R.id.btn_speed;
+      ImageButton btnSpeed = ViewBindings.findChildViewById(rootView, id);
+      if (btnSpeed == null) {
+        break missingId;
+      }
+
+      id = R.id.btn_subtitle;
+      ImageButton btnSubtitle = ViewBindings.findChildViewById(rootView, id);
+      if (btnSubtitle == null) {
+        break missingId;
+      }
+
+      id = R.id.controls_overlay;
+      LinearLayout controlsOverlay = ViewBindings.findChildViewById(rootView, id);
+      if (controlsOverlay == null) {
+        break missingId;
+      }
+
       id = R.id.error_text;
       TextView errorText = ViewBindings.findChildViewById(rootView, id);
       if (errorText == null) {
+        break missingId;
+      }
+
+      id = R.id.info_overlay;
+      LinearLayout infoOverlay = ViewBindings.findChildViewById(rootView, id);
+      if (infoOverlay == null) {
         break missingId;
       }
 
@@ -83,8 +244,40 @@ public final class ActivityPlayerBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityPlayerBinding((FrameLayout) rootView, errorText, loadingIndicator,
-          playerView);
+      id = R.id.seek_bar;
+      SeekBar seekBar = ViewBindings.findChildViewById(rootView, id);
+      if (seekBar == null) {
+        break missingId;
+      }
+
+      id = R.id.txt_current_time;
+      TextView txtCurrentTime = ViewBindings.findChildViewById(rootView, id);
+      if (txtCurrentTime == null) {
+        break missingId;
+      }
+
+      id = R.id.txt_duration;
+      TextView txtDuration = ViewBindings.findChildViewById(rootView, id);
+      if (txtDuration == null) {
+        break missingId;
+      }
+
+      id = R.id.txt_title;
+      TextView txtTitle = ViewBindings.findChildViewById(rootView, id);
+      if (txtTitle == null) {
+        break missingId;
+      }
+
+      id = R.id.txt_video_info;
+      TextView txtVideoInfo = ViewBindings.findChildViewById(rootView, id);
+      if (txtVideoInfo == null) {
+        break missingId;
+      }
+
+      return new ActivityPlayerBinding((FrameLayout) rootView, btnAspectRatio, btnAudioTrack,
+          btnBack, btnInfo, btnPip, btnPlayPause, btnQuality, btnSeekBack, btnSeekForward, btnSpeed,
+          btnSubtitle, controlsOverlay, errorText, infoOverlay, loadingIndicator, playerView,
+          seekBar, txtCurrentTime, txtDuration, txtTitle, txtVideoInfo);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

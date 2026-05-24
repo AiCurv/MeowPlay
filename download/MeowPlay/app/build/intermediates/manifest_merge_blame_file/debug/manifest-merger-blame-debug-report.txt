@@ -1,8 +1,8 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.meowplay.tv.debug"
-4    android:versionCode="2"
-5    android:versionName="1.1.0-debug" >
+4    android:versionCode="3"
+5    android:versionName="1.2.0-debug" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
@@ -17,327 +17,363 @@
 13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 13-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:7:5-76
 13-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:7:22-73
-14
-15    <!-- Android TV support -->
-16    <uses-feature
-16-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:10:5-87
-17        android:name="android.software.leanback"
-17-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:10:19-59
-18        android:required="false" />
-18-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:10:60-84
+14    <uses-permission
+14-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:8:5-9:38
+15        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+15-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:8:22-78
+16        android:maxSdkVersion="28" />
+16-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:9:9-35
+17
+18    <!-- Android TV support -->
 19    <uses-feature
-19-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:11:5-90
-20        android:name="android.hardware.touchscreen"
-20-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:11:19-62
+19-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:12:5-87
+20        android:name="android.software.leanback"
+20-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:12:19-59
 21        android:required="false" />
-21-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:11:63-87
+21-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:12:60-84
 22    <uses-feature
-22-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:12:5-94
-23        android:name="android.hardware.type.television"
-23-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:12:19-66
+22-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:13:5-90
+23        android:name="android.hardware.touchscreen"
+23-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:13:19-62
 24        android:required="false" />
-24-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:12:67-91
-25
-26    <permission
-26-->[androidx.core:core:1.12.0] /home/z/.gradle/caches/transforms-3/05365192e8c93a127ae620124358980f/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
-27        android:name="com.meowplay.tv.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-27-->[androidx.core:core:1.12.0] /home/z/.gradle/caches/transforms-3/05365192e8c93a127ae620124358980f/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
-28        android:protectionLevel="signature" />
-28-->[androidx.core:core:1.12.0] /home/z/.gradle/caches/transforms-3/05365192e8c93a127ae620124358980f/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
-29
-30    <uses-permission android:name="com.meowplay.tv.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-30-->[androidx.core:core:1.12.0] /home/z/.gradle/caches/transforms-3/05365192e8c93a127ae620124358980f/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
-30-->[androidx.core:core:1.12.0] /home/z/.gradle/caches/transforms-3/05365192e8c93a127ae620124358980f/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
-31
-32    <application
-32-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:14:5-113:19
-33        android:name="com.meowplay.tv.MeowPlayApp"
-33-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:15:9-36
-34        android:allowBackup="true"
-34-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:16:9-35
-35        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-35-->[androidx.core:core:1.12.0] /home/z/.gradle/caches/transforms-3/05365192e8c93a127ae620124358980f/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
-36        android:banner="@drawable/app_banner"
-36-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:17:9-46
-37        android:debuggable="true"
-38        android:extractNativeLibs="true"
-39        android:icon="@mipmap/ic_launcher"
-39-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:18:9-43
-40        android:label="@string/app_name"
-40-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:19:9-41
-41        android:logo="@mipmap/ic_launcher"
-41-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:20:9-43
-42        android:supportsRtl="true"
-42-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:21:9-35
-43        android:theme="@style/Theme.MeowPlay"
-43-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:22:9-46
-44        android:usesCleartextTraffic="true" >
-44-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:23:9-44
-45
-46        <!-- Main Activity (Leanback Browse) -->
-47        <activity
-47-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:27:9-37:20
-48            android:name="com.meowplay.tv.MainActivity"
-48-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:28:13-41
-49            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
-49-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:31:13-115
-50            android:exported="true"
-50-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:29:13-36
-51            android:screenOrientation="landscape" >
-51-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:30:13-50
-52            <intent-filter>
-52-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:32:13-36:29
-53                <action android:name="android.intent.action.MAIN" />
-53-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:33:17-69
-53-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:33:25-66
-54
-55                <category android:name="android.intent.category.LAUNCHER" />
-55-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:34:17-77
-55-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:34:27-74
-56                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
-56-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:35:17-86
-56-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:35:27-83
-57            </intent-filter>
-58        </activity>
-59
-60        <!-- Video Player Activity -->
-61        <activity
-61-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:40:9-99:20
-62            android:name="com.meowplay.tv.player.PlayerActivity"
-62-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:41:13-50
-63            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
-63-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:44:13-115
-64            android:exported="true"
-64-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:42:13-36
-65            android:screenOrientation="landscape"
+24-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:13:63-87
+25    <uses-feature
+25-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:14:5-94
+26        android:name="android.hardware.type.television"
+26-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:14:19-66
+27        android:required="false" />
+27-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:14:67-91
+28
+29    <permission
+29-->[androidx.core:core:1.12.0] /home/z/.gradle/caches/transforms-3/05365192e8c93a127ae620124358980f/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+30        android:name="com.meowplay.tv.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+30-->[androidx.core:core:1.12.0] /home/z/.gradle/caches/transforms-3/05365192e8c93a127ae620124358980f/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+31        android:protectionLevel="signature" />
+31-->[androidx.core:core:1.12.0] /home/z/.gradle/caches/transforms-3/05365192e8c93a127ae620124358980f/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+32
+33    <uses-permission android:name="com.meowplay.tv.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+33-->[androidx.core:core:1.12.0] /home/z/.gradle/caches/transforms-3/05365192e8c93a127ae620124358980f/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+33-->[androidx.core:core:1.12.0] /home/z/.gradle/caches/transforms-3/05365192e8c93a127ae620124358980f/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+34
+35    <application
+35-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:16:5-133:19
+36        android:name="com.meowplay.tv.MeowPlayApp"
+36-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:17:9-36
+37        android:allowBackup="true"
+37-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:18:9-35
+38        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+38-->[androidx.core:core:1.12.0] /home/z/.gradle/caches/transforms-3/05365192e8c93a127ae620124358980f/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+39        android:banner="@drawable/app_banner"
+39-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:19:9-46
+40        android:debuggable="true"
+41        android:extractNativeLibs="true"
+42        android:icon="@mipmap/ic_launcher"
+42-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:20:9-43
+43        android:label="@string/app_name"
+43-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:21:9-41
+44        android:logo="@mipmap/ic_launcher"
+44-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:22:9-43
+45        android:supportsRtl="true"
+45-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:23:9-35
+46        android:theme="@style/Theme.MeowPlay"
+46-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:24:9-46
+47        android:usesCleartextTraffic="true" >
+47-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:25:9-44
+48
+49        <!-- Main Activity (Leanback Browse) -->
+50        <activity
+50-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:29:9-39:20
+51            android:name="com.meowplay.tv.MainActivity"
+51-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:30:13-41
+52            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
+52-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:33:13-115
+53            android:exported="true"
+53-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:31:13-36
+54            android:screenOrientation="landscape" >
+54-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:32:13-50
+55            <intent-filter>
+55-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:34:13-38:29
+56                <action android:name="android.intent.action.MAIN" />
+56-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:35:17-69
+56-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:35:25-66
+57
+58                <category android:name="android.intent.category.LAUNCHER" />
+58-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:36:17-77
+58-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:36:27-74
+59                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+59-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:37:17-86
+59-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:37:27-83
+60            </intent-filter>
+61        </activity>
+62
+63        <!-- Video Player Activity -->
+64        <activity
+64-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:42:9-101:20
+65            android:name="com.meowplay.tv.player.PlayerActivity"
 65-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:43:13-50
-66            android:theme="@style/Theme.MeowPlay.Player" >
-66-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:45:13-57
-67
-68            <!-- ACTION_VIEW with video/* MIME type (Stremio, CloudStream, etc.) -->
-69            <intent-filter>
-69-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:48:13-56:29
-70                <action android:name="android.intent.action.VIEW" />
-70-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:49:17-69
-70-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:49:25-66
-71
-72                <category android:name="android.intent.category.DEFAULT" />
-72-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:17-76
-72-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:27-73
-73                <category android:name="android.intent.category.BROWSABLE" />
-73-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:17-78
-73-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:27-75
+66            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
+66-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:46:13-115
+67            android:exported="true"
+67-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:44:13-36
+68            android:screenOrientation="landscape"
+68-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:45:13-50
+69            android:theme="@style/Theme.MeowPlay.Player" >
+69-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:47:13-57
+70
+71            <!-- ACTION_VIEW with video/* MIME type -->
+72            <intent-filter>
+72-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:13-58:29
+73                <action android:name="android.intent.action.VIEW" />
+73-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:17-69
+73-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:25-66
 74
-75                <data android:scheme="http" />
-75-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
-75-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:23-44
-76                <data android:scheme="https" />
-76-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
-76-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:23-44
-77                <data android:scheme="content" />
-77-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
-77-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:23-44
-78                <data android:mimeType="video/*" />
-78-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
-78-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:55:23-49
-79            </intent-filter>
-80
-81            <!-- ACTION_VIEW without MIME type (some apps don't set it) -->
-82            <intent-filter>
-82-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:59:13-65:29
-83                <action android:name="android.intent.action.VIEW" />
-83-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:49:17-69
-83-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:49:25-66
-84
-85                <category android:name="android.intent.category.DEFAULT" />
-85-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:17-76
-85-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:27-73
-86                <category android:name="android.intent.category.BROWSABLE" />
-86-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:17-78
-86-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:27-75
+75                <category android:name="android.intent.category.DEFAULT" />
+75-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-76
+75-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:27-73
+76                <category android:name="android.intent.category.BROWSABLE" />
+76-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:53:17-78
+76-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:53:27-75
+77
+78                <data android:scheme="http" />
+78-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:54:17-47
+78-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:54:23-44
+79                <data android:scheme="https" />
+79-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:54:17-47
+79-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:54:23-44
+80                <data android:scheme="content" />
+80-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:54:17-47
+80-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:54:23-44
+81                <data android:mimeType="video/*" />
+81-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:54:17-47
+81-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:57:23-49
+82            </intent-filter>
+83
+84            <!-- ACTION_VIEW without MIME type -->
+85            <intent-filter>
+85-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:61:13-67:29
+86                <action android:name="android.intent.action.VIEW" />
+86-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:17-69
+86-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:25-66
 87
-88                <data android:scheme="http" />
-88-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
-88-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:23-44
-89                <data android:scheme="https" />
-89-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
-89-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:23-44
-90            </intent-filter>
-91
-92            <!-- M3U8 / HLS specific -->
-93            <intent-filter>
-93-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:68:13-76:29
-94                <action android:name="android.intent.action.VIEW" />
-94-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:49:17-69
-94-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:49:25-66
-95
-96                <category android:name="android.intent.category.DEFAULT" />
-96-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:17-76
-96-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:27-73
-97                <category android:name="android.intent.category.BROWSABLE" />
-97-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:17-78
-97-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:27-75
+88                <category android:name="android.intent.category.DEFAULT" />
+88-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-76
+88-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:27-73
+89                <category android:name="android.intent.category.BROWSABLE" />
+89-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:53:17-78
+89-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:53:27-75
+90
+91                <data android:scheme="http" />
+91-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:54:17-47
+91-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:54:23-44
+92                <data android:scheme="https" />
+92-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:54:17-47
+92-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:54:23-44
+93            </intent-filter>
+94
+95            <!-- M3U8 / HLS -->
+96            <intent-filter>
+96-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:70:13-78:29
+97                <action android:name="android.intent.action.VIEW" />
+97-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:17-69
+97-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:25-66
 98
-99                <data android:scheme="http" />
-99-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
-99-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:23-44
-100                <data android:scheme="https" />
-100-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
-100-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:23-44
-101                <data android:mimeType="application/x-mpegURL" />
-101-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
-101-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:55:23-49
-102                <data android:mimeType="application/vnd.apple.mpegurl" />
-102-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
-102-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:55:23-49
-103            </intent-filter>
-104
-105            <!-- Shared text (URL from other apps) -->
-106            <intent-filter>
-106-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:79:13-83:29
-107                <action android:name="android.intent.action.SEND" />
-107-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:80:17-69
-107-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:80:25-66
-108
-109                <category android:name="android.intent.category.DEFAULT" />
-109-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:17-76
-109-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:27-73
-110
-111                <data android:mimeType="text/plain" />
-111-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
-111-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:55:23-49
-112            </intent-filter>
+99                <category android:name="android.intent.category.DEFAULT" />
+99-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-76
+99-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:27-73
+100                <category android:name="android.intent.category.BROWSABLE" />
+100-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:53:17-78
+100-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:53:27-75
+101
+102                <data android:scheme="http" />
+102-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:54:17-47
+102-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:54:23-44
+103                <data android:scheme="https" />
+103-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:54:17-47
+103-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:54:23-44
+104                <data android:mimeType="application/x-mpegURL" />
+104-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:54:17-47
+104-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:57:23-49
+105                <data android:mimeType="application/vnd.apple.mpegurl" />
+105-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:54:17-47
+105-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:57:23-49
+106            </intent-filter>
+107
+108            <!-- Shared text -->
+109            <intent-filter>
+109-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:81:13-85:29
+110                <action android:name="android.intent.action.SEND" />
+110-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:82:17-69
+110-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:82:25-66
+111
+112                <category android:name="android.intent.category.DEFAULT" />
+112-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-76
+112-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:27-73
 113
-114            <!-- Shared video -->
-115            <intent-filter>
-115-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:86:13-90:29
-116                <action android:name="android.intent.action.SEND" />
-116-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:80:17-69
-116-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:80:25-66
-117
-118                <category android:name="android.intent.category.DEFAULT" />
-118-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:17-76
-118-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:27-73
-119
-120                <data android:mimeType="video/*" />
-120-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
-120-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:55:23-49
-121            </intent-filter>
+114                <data android:mimeType="text/plain" />
+114-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:54:17-47
+114-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:57:23-49
+115            </intent-filter>
+116
+117            <!-- Shared video -->
+118            <intent-filter>
+118-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:88:13-92:29
+119                <action android:name="android.intent.action.SEND" />
+119-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:82:17-69
+119-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:82:25-66
+120
+121                <category android:name="android.intent.category.DEFAULT" />
+121-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-76
+121-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:27-73
 122
-123            <!-- Magnet links -->
-124            <intent-filter>
-124-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:93:13-98:29
-125                <action android:name="android.intent.action.VIEW" />
-125-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:49:17-69
-125-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:49:25-66
-126
-127                <category android:name="android.intent.category.DEFAULT" />
-127-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:17-76
-127-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:27-73
-128                <category android:name="android.intent.category.BROWSABLE" />
-128-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:17-78
-128-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:27-75
+123                <data android:mimeType="video/*" />
+123-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:54:17-47
+123-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:57:23-49
+124            </intent-filter>
+125
+126            <!-- Magnet links -->
+127            <intent-filter>
+127-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:95:13-100:29
+128                <action android:name="android.intent.action.VIEW" />
+128-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:17-69
+128-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:25-66
 129
-130                <data android:scheme="magnet" />
-130-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
-130-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:23-44
-131            </intent-filter>
-132        </activity>
-133
-134        <!-- History Activity -->
-135        <activity
-135-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:102:9-105:58
-136            android:name="com.meowplay.tv.ui.HistoryActivity"
-136-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:103:13-47
-137            android:exported="false"
-137-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:104:13-37
-138            android:parentActivityName="com.meowplay.tv.MainActivity" />
-138-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:105:13-55
-139
-140        <!-- Paste Link Activity -->
-141        <activity
-141-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:108:9-111:58
-142            android:name="com.meowplay.tv.ui.PasteLinkActivity"
-142-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:109:13-49
-143            android:exported="false"
-143-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:110:13-37
-144            android:parentActivityName="com.meowplay.tv.MainActivity" />
-144-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:111:13-55
-145
-146        <provider
-146-->[androidx.emoji2:emoji2:1.2.0] /home/z/.gradle/caches/transforms-3/70da4e4e1388184bab94ea674e68fd8f/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-147            android:name="androidx.startup.InitializationProvider"
-147-->[androidx.emoji2:emoji2:1.2.0] /home/z/.gradle/caches/transforms-3/70da4e4e1388184bab94ea674e68fd8f/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
-148            android:authorities="com.meowplay.tv.debug.androidx-startup"
-148-->[androidx.emoji2:emoji2:1.2.0] /home/z/.gradle/caches/transforms-3/70da4e4e1388184bab94ea674e68fd8f/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
-149            android:exported="false" >
-149-->[androidx.emoji2:emoji2:1.2.0] /home/z/.gradle/caches/transforms-3/70da4e4e1388184bab94ea674e68fd8f/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
-150            <meta-data
-150-->[androidx.emoji2:emoji2:1.2.0] /home/z/.gradle/caches/transforms-3/70da4e4e1388184bab94ea674e68fd8f/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-151                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-151-->[androidx.emoji2:emoji2:1.2.0] /home/z/.gradle/caches/transforms-3/70da4e4e1388184bab94ea674e68fd8f/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
-152                android:value="androidx.startup" />
-152-->[androidx.emoji2:emoji2:1.2.0] /home/z/.gradle/caches/transforms-3/70da4e4e1388184bab94ea674e68fd8f/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
-153            <meta-data
-153-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/z/.gradle/caches/transforms-3/b5aa617bebe5bc4c2ae6066dd8ccfdbb/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
-154                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-154-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/z/.gradle/caches/transforms-3/b5aa617bebe5bc4c2ae6066dd8ccfdbb/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
-155                android:value="androidx.startup" />
-155-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/z/.gradle/caches/transforms-3/b5aa617bebe5bc4c2ae6066dd8ccfdbb/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
-156            <meta-data
-156-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
-157                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-157-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
-158                android:value="androidx.startup" />
-158-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
-159        </provider>
+130                <category android:name="android.intent.category.DEFAULT" />
+130-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-76
+130-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:27-73
+131                <category android:name="android.intent.category.BROWSABLE" />
+131-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:53:17-78
+131-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:53:27-75
+132
+133                <data android:scheme="magnet" />
+133-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:54:17-47
+133-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:54:23-44
+134            </intent-filter>
+135        </activity>
+136
+137        <!-- Settings Activity -->
+138        <activity
+138-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:104:9-107:58
+139            android:name="com.meowplay.tv.ui.SettingsActivity"
+139-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:105:13-48
+140            android:exported="false"
+140-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:106:13-37
+141            android:parentActivityName="com.meowplay.tv.MainActivity" />
+141-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:107:13-55
+142
+143        <!-- Cache Manager Activity -->
+144        <activity
+144-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:110:9-113:58
+145            android:name="com.meowplay.tv.ui.CacheManagerActivity"
+145-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:111:13-52
+146            android:exported="false"
+146-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:112:13-37
+147            android:parentActivityName="com.meowplay.tv.MainActivity" />
+147-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:113:13-55
+148
+149        <!-- About Activity -->
+150        <activity
+150-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:116:9-119:58
+151            android:name="com.meowplay.tv.ui.AboutActivity"
+151-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:117:13-45
+152            android:exported="false"
+152-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:118:13-37
+153            android:parentActivityName="com.meowplay.tv.MainActivity" />
+153-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:119:13-55
+154
+155        <!-- History Activity -->
+156        <activity
+156-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:122:9-125:58
+157            android:name="com.meowplay.tv.ui.HistoryActivity"
+157-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:123:13-47
+158            android:exported="false"
+158-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:124:13-37
+159            android:parentActivityName="com.meowplay.tv.MainActivity" />
+159-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:125:13-55
 160
-161        <service
-161-->[androidx.room:room-runtime:2.6.1] /home/z/.gradle/caches/transforms-3/c2cd43fde83dd9a1a88da93eb036147e/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
-162            android:name="androidx.room.MultiInstanceInvalidationService"
-162-->[androidx.room:room-runtime:2.6.1] /home/z/.gradle/caches/transforms-3/c2cd43fde83dd9a1a88da93eb036147e/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
-163            android:directBootAware="true"
-163-->[androidx.room:room-runtime:2.6.1] /home/z/.gradle/caches/transforms-3/c2cd43fde83dd9a1a88da93eb036147e/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
-164            android:exported="false" />
-164-->[androidx.room:room-runtime:2.6.1] /home/z/.gradle/caches/transforms-3/c2cd43fde83dd9a1a88da93eb036147e/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
-165
-166        <receiver
-166-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
-167            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-167-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
-168            android:directBootAware="false"
-168-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
-169            android:enabled="true"
-169-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
-170            android:exported="true"
-170-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
-171            android:permission="android.permission.DUMP" >
-171-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
-172            <intent-filter>
-172-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
-173                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-173-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
-173-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
-174            </intent-filter>
-175            <intent-filter>
-175-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
-176                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-176-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
-176-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
-177            </intent-filter>
-178            <intent-filter>
-178-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
-179                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-179-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
-179-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
-180            </intent-filter>
-181            <intent-filter>
-181-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
-182                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-182-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
-182-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
-183            </intent-filter>
-184        </receiver>
-185    </application>
+161        <!-- Paste Link Activity -->
+162        <activity
+162-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:128:9-131:58
+163            android:name="com.meowplay.tv.ui.PasteLinkActivity"
+163-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:129:13-49
+164            android:exported="false"
+164-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:130:13-37
+165            android:parentActivityName="com.meowplay.tv.MainActivity" />
+165-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:131:13-55
+166
+167        <provider
+167-->[androidx.emoji2:emoji2:1.2.0] /home/z/.gradle/caches/transforms-3/70da4e4e1388184bab94ea674e68fd8f/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+168            android:name="androidx.startup.InitializationProvider"
+168-->[androidx.emoji2:emoji2:1.2.0] /home/z/.gradle/caches/transforms-3/70da4e4e1388184bab94ea674e68fd8f/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+169            android:authorities="com.meowplay.tv.debug.androidx-startup"
+169-->[androidx.emoji2:emoji2:1.2.0] /home/z/.gradle/caches/transforms-3/70da4e4e1388184bab94ea674e68fd8f/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+170            android:exported="false" >
+170-->[androidx.emoji2:emoji2:1.2.0] /home/z/.gradle/caches/transforms-3/70da4e4e1388184bab94ea674e68fd8f/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+171            <meta-data
+171-->[androidx.emoji2:emoji2:1.2.0] /home/z/.gradle/caches/transforms-3/70da4e4e1388184bab94ea674e68fd8f/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+172                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+172-->[androidx.emoji2:emoji2:1.2.0] /home/z/.gradle/caches/transforms-3/70da4e4e1388184bab94ea674e68fd8f/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+173                android:value="androidx.startup" />
+173-->[androidx.emoji2:emoji2:1.2.0] /home/z/.gradle/caches/transforms-3/70da4e4e1388184bab94ea674e68fd8f/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+174            <meta-data
+174-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/z/.gradle/caches/transforms-3/b5aa617bebe5bc4c2ae6066dd8ccfdbb/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+175                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+175-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/z/.gradle/caches/transforms-3/b5aa617bebe5bc4c2ae6066dd8ccfdbb/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+176                android:value="androidx.startup" />
+176-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/z/.gradle/caches/transforms-3/b5aa617bebe5bc4c2ae6066dd8ccfdbb/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+177            <meta-data
+177-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+178                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+178-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+179                android:value="androidx.startup" />
+179-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+180        </provider>
+181
+182        <service
+182-->[androidx.room:room-runtime:2.6.1] /home/z/.gradle/caches/transforms-3/c2cd43fde83dd9a1a88da93eb036147e/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+183            android:name="androidx.room.MultiInstanceInvalidationService"
+183-->[androidx.room:room-runtime:2.6.1] /home/z/.gradle/caches/transforms-3/c2cd43fde83dd9a1a88da93eb036147e/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+184            android:directBootAware="true"
+184-->[androidx.room:room-runtime:2.6.1] /home/z/.gradle/caches/transforms-3/c2cd43fde83dd9a1a88da93eb036147e/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+185            android:exported="false" />
+185-->[androidx.room:room-runtime:2.6.1] /home/z/.gradle/caches/transforms-3/c2cd43fde83dd9a1a88da93eb036147e/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
 186
-187</manifest>
+187        <receiver
+187-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+188            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+188-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+189            android:directBootAware="false"
+189-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+190            android:enabled="true"
+190-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+191            android:exported="true"
+191-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+192            android:permission="android.permission.DUMP" >
+192-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+193            <intent-filter>
+193-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+194                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+194-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+194-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+195            </intent-filter>
+196            <intent-filter>
+196-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+197                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+197-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+197-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+198            </intent-filter>
+199            <intent-filter>
+199-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+200                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+200-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+200-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+201            </intent-filter>
+202            <intent-filter>
+202-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+203                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+203-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+203-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/z/.gradle/caches/transforms-3/711a527c07c5d7f146ab93115698532f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+204            </intent-filter>
+205        </receiver>
+206    </application>
+207
+208</manifest>

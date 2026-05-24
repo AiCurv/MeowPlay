@@ -4,9 +4,9 @@ package com.meowplay.tv.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -21,16 +21,16 @@ public final class ActivityPasteLinkBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final Button backBtn;
+  public final TextView backBtn;
 
   @NonNull
-  public final Button pastePlayBtn;
+  public final TextView pastePlayBtn;
 
   @NonNull
   public final EditText pasteUrlInput;
 
-  private ActivityPasteLinkBinding(@NonNull LinearLayout rootView, @NonNull Button backBtn,
-      @NonNull Button pastePlayBtn, @NonNull EditText pasteUrlInput) {
+  private ActivityPasteLinkBinding(@NonNull LinearLayout rootView, @NonNull TextView backBtn,
+      @NonNull TextView pastePlayBtn, @NonNull EditText pasteUrlInput) {
     this.rootView = rootView;
     this.backBtn = backBtn;
     this.pastePlayBtn = pastePlayBtn;
@@ -65,13 +65,13 @@ public final class ActivityPasteLinkBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.back_btn;
-      Button backBtn = ViewBindings.findChildViewById(rootView, id);
+      TextView backBtn = ViewBindings.findChildViewById(rootView, id);
       if (backBtn == null) {
         break missingId;
       }
 
       id = R.id.paste_play_btn;
-      Button pastePlayBtn = ViewBindings.findChildViewById(rootView, id);
+      TextView pastePlayBtn = ViewBindings.findChildViewById(rootView, id);
       if (pastePlayBtn == null) {
         break missingId;
       }

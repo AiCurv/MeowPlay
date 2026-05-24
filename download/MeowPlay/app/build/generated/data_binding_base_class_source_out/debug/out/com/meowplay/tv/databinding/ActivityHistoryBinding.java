@@ -4,7 +4,6 @@ package com.meowplay.tv.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -23,10 +22,10 @@ public final class ActivityHistoryBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final Button backBtn;
+  public final TextView backBtn;
 
   @NonNull
-  public final Button clearAllBtn;
+  public final TextView clearAllBtn;
 
   @NonNull
   public final TextView emptyView;
@@ -37,8 +36,8 @@ public final class ActivityHistoryBinding implements ViewBinding {
   @NonNull
   public final EditText searchInput;
 
-  private ActivityHistoryBinding(@NonNull LinearLayout rootView, @NonNull Button backBtn,
-      @NonNull Button clearAllBtn, @NonNull TextView emptyView,
+  private ActivityHistoryBinding(@NonNull LinearLayout rootView, @NonNull TextView backBtn,
+      @NonNull TextView clearAllBtn, @NonNull TextView emptyView,
       @NonNull RecyclerView historyRecycler, @NonNull EditText searchInput) {
     this.rootView = rootView;
     this.backBtn = backBtn;
@@ -76,13 +75,13 @@ public final class ActivityHistoryBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.back_btn;
-      Button backBtn = ViewBindings.findChildViewById(rootView, id);
+      TextView backBtn = ViewBindings.findChildViewById(rootView, id);
       if (backBtn == null) {
         break missingId;
       }
 
       id = R.id.clear_all_btn;
-      Button clearAllBtn = ViewBindings.findChildViewById(rootView, id);
+      TextView clearAllBtn = ViewBindings.findChildViewById(rootView, id);
       if (clearAllBtn == null) {
         break missingId;
       }

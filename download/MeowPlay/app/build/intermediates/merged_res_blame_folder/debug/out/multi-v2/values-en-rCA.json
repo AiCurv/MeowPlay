@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.meowplay.tv.app-mergeDebugResources-47:/values-en-rCA/values-en-rCA.xml",
+            "outputFile": "com.meowplay.tv.app-mergeDebugResources-48:/values-en-rCA/values-en-rCA.xml",
             "map": [
                 {
                     "source": "/home/z/.gradle/caches/transforms-3/05365192e8c93a127ae620124358980f/transformed/core-1.12.0/res/values-en-rCA/values-en-rCA.xml",

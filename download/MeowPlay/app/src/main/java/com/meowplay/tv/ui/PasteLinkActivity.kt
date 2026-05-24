@@ -6,8 +6,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
-import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
 import com.meowplay.tv.R
@@ -15,13 +15,12 @@ import com.meowplay.tv.player.PlayerActivity
 
 /**
  * Paste Link screen — TV-optimized with D-pad.
- * Large text input field + play button, auto-paste from clipboard.
  */
 class PasteLinkActivity : FragmentActivity() {
 
     private lateinit var urlInput: EditText
-    private lateinit var playBtn: Button
-    private lateinit var backBtn: Button
+    private lateinit var playBtn: TextView
+    private lateinit var backBtn: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,11 +29,6 @@ class PasteLinkActivity : FragmentActivity() {
         urlInput = findViewById(R.id.paste_url_input)
         playBtn = findViewById(R.id.paste_play_btn)
         backBtn = findViewById(R.id.back_btn)
-
-        // D-pad focus chain
-        backBtn.nextFocusDownId = R.id.paste_url_input
-        urlInput.nextFocusDownId = R.id.paste_play_btn
-        playBtn.nextFocusUpId = R.id.paste_url_input
 
         // Auto-paste from clipboard
         val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager

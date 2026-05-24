@@ -5,6 +5,7 @@ import android.content.Intent
 import com.google.gson.Gson
 import com.meowplay.tv.player.CacheManager
 import com.meowplay.tv.player.PlayerActivity
+import com.meowplay.tv.player.PlayerSettingsManager
 import fi.iki.elonen.NanoHTTPD
 
 class RemoteServer(private val context: Context, port: Int = 8080) : NanoHTTPD(port) {
@@ -14,7 +15,7 @@ class RemoteServer(private val context: Context, port: Int = 8080) : NanoHTTPD(p
         val uri = session.uri ?: "/"
         return try {
             when {
-                uri == "/" || uri == "/api" -> jsonResponse(mapOf("app" to "MeowPlay", "version" to "1.0.0"))
+                uri == "/" || uri == "/api" -> jsonResponse(mapOf("app" to "MeowPlay", "version" to "1.2.0"))
                 uri == "/api/status" -> jsonResponse(mapOf("isPlaying" to false))
                 uri == "/api/play" && session.method == Method.POST -> {
                     val body = readBody(session)
@@ -36,6 +37,18 @@ class RemoteServer(private val context: Context, port: Int = 8080) : NanoHTTPD(p
                 uri == "/api/cache/clear" && session.method == Method.POST -> {
                     CacheManager.getInstance(context).clearAllCache()
                     jsonResponse(mapOf("success" to true))
+                }
+                uri == "/api/settings" -> {
+                    val settings = PlayerSettingsManager.getInstance(context)
+                    jsonResponse(mapOf(
+                        "diskCacheMb" to settings.getDiskCacheSizeMb(),
+                        "ramBufferMb" to settings.getRamBufferSizeMb(),
+                        "bufferLengthSec" to settings.getBufferLengthSec(),
+                        "hwAccel" to settings.getHwAccel(),
+                        "audioPassthrough" to settings.getAudioPassthrough(),
+                        "userAgent" to settings.getUserAgent(),
+                        "playbackSpeed" to settings.getPlaybackSpeed()
+                    ))
                 }
                 else -> jsonResponse(mapOf("error" to "Not found"), 404)
             }
