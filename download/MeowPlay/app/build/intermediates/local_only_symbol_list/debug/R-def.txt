@@ -76,10 +76,16 @@ id loading_indicator
 id main_container
 id paste_play_btn
 id paste_url_input
+id play_pause_indicator
 id player_view
 id search_input
 id seek_bar
 id seek_bar_delay
+id seek_bar_overlay
+id seek_indicator
+id seek_overlay_bar
+id seek_overlay_current_time
+id seek_overlay_duration
 id settings_item_desc
 id settings_item_title
 id settings_list

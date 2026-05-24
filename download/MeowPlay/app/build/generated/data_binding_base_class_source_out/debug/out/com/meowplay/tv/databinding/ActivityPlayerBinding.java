@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.SeekBar;
@@ -70,10 +71,28 @@ public final class ActivityPlayerBinding implements ViewBinding {
   public final ProgressBar loadingIndicator;
 
   @NonNull
+  public final ImageView playPauseIndicator;
+
+  @NonNull
   public final PlayerView playerView;
 
   @NonNull
   public final SeekBar seekBar;
+
+  @NonNull
+  public final LinearLayout seekBarOverlay;
+
+  @NonNull
+  public final TextView seekIndicator;
+
+  @NonNull
+  public final SeekBar seekOverlayBar;
+
+  @NonNull
+  public final TextView seekOverlayCurrentTime;
+
+  @NonNull
+  public final TextView seekOverlayDuration;
 
   @NonNull
   public final TextView txtCurrentTime;
@@ -94,9 +113,12 @@ public final class ActivityPlayerBinding implements ViewBinding {
       @NonNull ImageButton btnSeekForward, @NonNull ImageButton btnSpeed,
       @NonNull ImageButton btnSubtitle, @NonNull LinearLayout controlsOverlay,
       @NonNull TextView errorText, @NonNull LinearLayout infoOverlay,
-      @NonNull ProgressBar loadingIndicator, @NonNull PlayerView playerView,
-      @NonNull SeekBar seekBar, @NonNull TextView txtCurrentTime, @NonNull TextView txtDuration,
-      @NonNull TextView txtTitle, @NonNull TextView txtVideoInfo) {
+      @NonNull ProgressBar loadingIndicator, @NonNull ImageView playPauseIndicator,
+      @NonNull PlayerView playerView, @NonNull SeekBar seekBar,
+      @NonNull LinearLayout seekBarOverlay, @NonNull TextView seekIndicator,
+      @NonNull SeekBar seekOverlayBar, @NonNull TextView seekOverlayCurrentTime,
+      @NonNull TextView seekOverlayDuration, @NonNull TextView txtCurrentTime,
+      @NonNull TextView txtDuration, @NonNull TextView txtTitle, @NonNull TextView txtVideoInfo) {
     this.rootView = rootView;
     this.btnAspectRatio = btnAspectRatio;
     this.btnAudioTrack = btnAudioTrack;
@@ -113,8 +135,14 @@ public final class ActivityPlayerBinding implements ViewBinding {
     this.errorText = errorText;
     this.infoOverlay = infoOverlay;
     this.loadingIndicator = loadingIndicator;
+    this.playPauseIndicator = playPauseIndicator;
     this.playerView = playerView;
     this.seekBar = seekBar;
+    this.seekBarOverlay = seekBarOverlay;
+    this.seekIndicator = seekIndicator;
+    this.seekOverlayBar = seekOverlayBar;
+    this.seekOverlayCurrentTime = seekOverlayCurrentTime;
+    this.seekOverlayDuration = seekOverlayDuration;
     this.txtCurrentTime = txtCurrentTime;
     this.txtDuration = txtDuration;
     this.txtTitle = txtTitle;
@@ -238,6 +266,12 @@ public final class ActivityPlayerBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.play_pause_indicator;
+      ImageView playPauseIndicator = ViewBindings.findChildViewById(rootView, id);
+      if (playPauseIndicator == null) {
+        break missingId;
+      }
+
       id = R.id.player_view;
       PlayerView playerView = ViewBindings.findChildViewById(rootView, id);
       if (playerView == null) {
@@ -247,6 +281,36 @@ public final class ActivityPlayerBinding implements ViewBinding {
       id = R.id.seek_bar;
       SeekBar seekBar = ViewBindings.findChildViewById(rootView, id);
       if (seekBar == null) {
+        break missingId;
+      }
+
+      id = R.id.seek_bar_overlay;
+      LinearLayout seekBarOverlay = ViewBindings.findChildViewById(rootView, id);
+      if (seekBarOverlay == null) {
+        break missingId;
+      }
+
+      id = R.id.seek_indicator;
+      TextView seekIndicator = ViewBindings.findChildViewById(rootView, id);
+      if (seekIndicator == null) {
+        break missingId;
+      }
+
+      id = R.id.seek_overlay_bar;
+      SeekBar seekOverlayBar = ViewBindings.findChildViewById(rootView, id);
+      if (seekOverlayBar == null) {
+        break missingId;
+      }
+
+      id = R.id.seek_overlay_current_time;
+      TextView seekOverlayCurrentTime = ViewBindings.findChildViewById(rootView, id);
+      if (seekOverlayCurrentTime == null) {
+        break missingId;
+      }
+
+      id = R.id.seek_overlay_duration;
+      TextView seekOverlayDuration = ViewBindings.findChildViewById(rootView, id);
+      if (seekOverlayDuration == null) {
         break missingId;
       }
 
@@ -276,8 +340,10 @@ public final class ActivityPlayerBinding implements ViewBinding {
 
       return new ActivityPlayerBinding((FrameLayout) rootView, btnAspectRatio, btnAudioTrack,
           btnBack, btnInfo, btnPip, btnPlayPause, btnQuality, btnSeekBack, btnSeekForward, btnSpeed,
-          btnSubtitle, controlsOverlay, errorText, infoOverlay, loadingIndicator, playerView,
-          seekBar, txtCurrentTime, txtDuration, txtTitle, txtVideoInfo);
+          btnSubtitle, controlsOverlay, errorText, infoOverlay, loadingIndicator,
+          playPauseIndicator, playerView, seekBar, seekBarOverlay, seekIndicator, seekOverlayBar,
+          seekOverlayCurrentTime, seekOverlayDuration, txtCurrentTime, txtDuration, txtTitle,
+          txtVideoInfo);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

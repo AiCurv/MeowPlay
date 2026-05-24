@@ -4544,6 +4544,7 @@ id peekHeight
 id percent
 id picker
 id pin
+id play_pause_indicator
 id playback_controls_dock
 id playback_fragment_background
 id playback_fragment_root
@@ -4597,6 +4598,11 @@ id search_voice_btn
 id secondary_controls_dock
 id seek_bar
 id seek_bar_delay
+id seek_bar_overlay
+id seek_indicator
+id seek_overlay_bar
+id seek_overlay_current_time
+id seek_overlay_duration
 id seekbar
 id seekbar_value
 id select_dialog_listview

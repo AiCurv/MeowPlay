@@ -9,34 +9,34 @@
 9        android:targetSdkVersion="34" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:5:5-67
-11-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:5:22-64
+11-->/home/z/my-project/app/src/main/AndroidManifest.xml:5:5-67
+11-->/home/z/my-project/app/src/main/AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:6:5-79
-12-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:6:22-76
+12-->/home/z/my-project/app/src/main/AndroidManifest.xml:6:5-79
+12-->/home/z/my-project/app/src/main/AndroidManifest.xml:6:22-76
 13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-13-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:7:5-76
-13-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:7:22-73
+13-->/home/z/my-project/app/src/main/AndroidManifest.xml:7:5-76
+13-->/home/z/my-project/app/src/main/AndroidManifest.xml:7:22-73
 14
 15    <!-- Android TV support -->
 16    <uses-feature
-16-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:10:5-87
+16-->/home/z/my-project/app/src/main/AndroidManifest.xml:10:5-87
 17        android:name="android.software.leanback"
-17-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:10:19-59
+17-->/home/z/my-project/app/src/main/AndroidManifest.xml:10:19-59
 18        android:required="false" />
-18-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:10:60-84
+18-->/home/z/my-project/app/src/main/AndroidManifest.xml:10:60-84
 19    <uses-feature
-19-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:11:5-90
+19-->/home/z/my-project/app/src/main/AndroidManifest.xml:11:5-90
 20        android:name="android.hardware.touchscreen"
-20-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:11:19-62
+20-->/home/z/my-project/app/src/main/AndroidManifest.xml:11:19-62
 21        android:required="false" />
-21-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:11:63-87
+21-->/home/z/my-project/app/src/main/AndroidManifest.xml:11:63-87
 22    <uses-feature
-22-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:12:5-94
+22-->/home/z/my-project/app/src/main/AndroidManifest.xml:12:5-94
 23        android:name="android.hardware.type.television"
-23-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:12:19-66
+23-->/home/z/my-project/app/src/main/AndroidManifest.xml:12:19-66
 24        android:required="false" />
-24-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:12:67-91
+24-->/home/z/my-project/app/src/main/AndroidManifest.xml:12:67-91
 25
 26    <permission
 26-->[androidx.core:core:1.12.0] /home/z/.gradle/caches/transforms-3/05365192e8c93a127ae620124358980f/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
@@ -50,219 +50,219 @@
 30-->[androidx.core:core:1.12.0] /home/z/.gradle/caches/transforms-3/05365192e8c93a127ae620124358980f/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
 31
 32    <application
-32-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:14:5-113:19
+32-->/home/z/my-project/app/src/main/AndroidManifest.xml:14:5-113:19
 33        android:name="com.meowplay.tv.MeowPlayApp"
-33-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:15:9-36
+33-->/home/z/my-project/app/src/main/AndroidManifest.xml:15:9-36
 34        android:allowBackup="true"
-34-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:16:9-35
+34-->/home/z/my-project/app/src/main/AndroidManifest.xml:16:9-35
 35        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 35-->[androidx.core:core:1.12.0] /home/z/.gradle/caches/transforms-3/05365192e8c93a127ae620124358980f/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
 36        android:banner="@drawable/app_banner"
-36-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:17:9-46
+36-->/home/z/my-project/app/src/main/AndroidManifest.xml:17:9-46
 37        android:debuggable="true"
 38        android:extractNativeLibs="true"
 39        android:icon="@mipmap/ic_launcher"
-39-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:18:9-43
+39-->/home/z/my-project/app/src/main/AndroidManifest.xml:18:9-43
 40        android:label="@string/app_name"
-40-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:19:9-41
+40-->/home/z/my-project/app/src/main/AndroidManifest.xml:19:9-41
 41        android:logo="@mipmap/ic_launcher"
-41-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:20:9-43
+41-->/home/z/my-project/app/src/main/AndroidManifest.xml:20:9-43
 42        android:supportsRtl="true"
-42-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:21:9-35
+42-->/home/z/my-project/app/src/main/AndroidManifest.xml:21:9-35
 43        android:theme="@style/Theme.MeowPlay"
-43-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:22:9-46
+43-->/home/z/my-project/app/src/main/AndroidManifest.xml:22:9-46
 44        android:usesCleartextTraffic="true" >
-44-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:23:9-44
+44-->/home/z/my-project/app/src/main/AndroidManifest.xml:23:9-44
 45
 46        <!-- Main Activity (Leanback Browse) -->
 47        <activity
-47-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:27:9-37:20
+47-->/home/z/my-project/app/src/main/AndroidManifest.xml:27:9-37:20
 48            android:name="com.meowplay.tv.MainActivity"
-48-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:28:13-41
+48-->/home/z/my-project/app/src/main/AndroidManifest.xml:28:13-41
 49            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
-49-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:31:13-115
+49-->/home/z/my-project/app/src/main/AndroidManifest.xml:31:13-115
 50            android:exported="true"
-50-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:29:13-36
+50-->/home/z/my-project/app/src/main/AndroidManifest.xml:29:13-36
 51            android:screenOrientation="landscape" >
-51-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:30:13-50
+51-->/home/z/my-project/app/src/main/AndroidManifest.xml:30:13-50
 52            <intent-filter>
-52-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:32:13-36:29
+52-->/home/z/my-project/app/src/main/AndroidManifest.xml:32:13-36:29
 53                <action android:name="android.intent.action.MAIN" />
-53-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:33:17-69
-53-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:33:25-66
+53-->/home/z/my-project/app/src/main/AndroidManifest.xml:33:17-69
+53-->/home/z/my-project/app/src/main/AndroidManifest.xml:33:25-66
 54
 55                <category android:name="android.intent.category.LAUNCHER" />
-55-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:34:17-77
-55-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:34:27-74
+55-->/home/z/my-project/app/src/main/AndroidManifest.xml:34:17-77
+55-->/home/z/my-project/app/src/main/AndroidManifest.xml:34:27-74
 56                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
-56-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:35:17-86
-56-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:35:27-83
+56-->/home/z/my-project/app/src/main/AndroidManifest.xml:35:17-86
+56-->/home/z/my-project/app/src/main/AndroidManifest.xml:35:27-83
 57            </intent-filter>
 58        </activity>
 59
 60        <!-- Video Player Activity -->
 61        <activity
-61-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:40:9-99:20
+61-->/home/z/my-project/app/src/main/AndroidManifest.xml:40:9-99:20
 62            android:name="com.meowplay.tv.player.PlayerActivity"
-62-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:41:13-50
+62-->/home/z/my-project/app/src/main/AndroidManifest.xml:41:13-50
 63            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
-63-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:44:13-115
+63-->/home/z/my-project/app/src/main/AndroidManifest.xml:44:13-115
 64            android:exported="true"
-64-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:42:13-36
+64-->/home/z/my-project/app/src/main/AndroidManifest.xml:42:13-36
 65            android:screenOrientation="landscape"
-65-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:43:13-50
+65-->/home/z/my-project/app/src/main/AndroidManifest.xml:43:13-50
 66            android:theme="@style/Theme.MeowPlay.Player" >
-66-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:45:13-57
+66-->/home/z/my-project/app/src/main/AndroidManifest.xml:45:13-57
 67
 68            <!-- ACTION_VIEW with video/* MIME type (Stremio, CloudStream, etc.) -->
 69            <intent-filter>
-69-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:48:13-56:29
+69-->/home/z/my-project/app/src/main/AndroidManifest.xml:48:13-56:29
 70                <action android:name="android.intent.action.VIEW" />
-70-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:49:17-69
-70-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:49:25-66
+70-->/home/z/my-project/app/src/main/AndroidManifest.xml:49:17-69
+70-->/home/z/my-project/app/src/main/AndroidManifest.xml:49:25-66
 71
 72                <category android:name="android.intent.category.DEFAULT" />
-72-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:17-76
-72-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:27-73
+72-->/home/z/my-project/app/src/main/AndroidManifest.xml:50:17-76
+72-->/home/z/my-project/app/src/main/AndroidManifest.xml:50:27-73
 73                <category android:name="android.intent.category.BROWSABLE" />
-73-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:17-78
-73-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:27-75
+73-->/home/z/my-project/app/src/main/AndroidManifest.xml:51:17-78
+73-->/home/z/my-project/app/src/main/AndroidManifest.xml:51:27-75
 74
 75                <data android:scheme="http" />
-75-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
-75-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:23-44
+75-->/home/z/my-project/app/src/main/AndroidManifest.xml:52:17-47
+75-->/home/z/my-project/app/src/main/AndroidManifest.xml:52:23-44
 76                <data android:scheme="https" />
-76-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
-76-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:23-44
+76-->/home/z/my-project/app/src/main/AndroidManifest.xml:52:17-47
+76-->/home/z/my-project/app/src/main/AndroidManifest.xml:52:23-44
 77                <data android:scheme="content" />
-77-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
-77-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:23-44
+77-->/home/z/my-project/app/src/main/AndroidManifest.xml:52:17-47
+77-->/home/z/my-project/app/src/main/AndroidManifest.xml:52:23-44
 78                <data android:mimeType="video/*" />
-78-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
-78-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:55:23-49
+78-->/home/z/my-project/app/src/main/AndroidManifest.xml:52:17-47
+78-->/home/z/my-project/app/src/main/AndroidManifest.xml:55:23-49
 79            </intent-filter>
 80
 81            <!-- ACTION_VIEW without MIME type (some apps don't set it) -->
 82            <intent-filter>
-82-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:59:13-65:29
+82-->/home/z/my-project/app/src/main/AndroidManifest.xml:59:13-65:29
 83                <action android:name="android.intent.action.VIEW" />
-83-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:49:17-69
-83-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:49:25-66
+83-->/home/z/my-project/app/src/main/AndroidManifest.xml:49:17-69
+83-->/home/z/my-project/app/src/main/AndroidManifest.xml:49:25-66
 84
 85                <category android:name="android.intent.category.DEFAULT" />
-85-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:17-76
-85-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:27-73
+85-->/home/z/my-project/app/src/main/AndroidManifest.xml:50:17-76
+85-->/home/z/my-project/app/src/main/AndroidManifest.xml:50:27-73
 86                <category android:name="android.intent.category.BROWSABLE" />
-86-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:17-78
-86-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:27-75
+86-->/home/z/my-project/app/src/main/AndroidManifest.xml:51:17-78
+86-->/home/z/my-project/app/src/main/AndroidManifest.xml:51:27-75
 87
 88                <data android:scheme="http" />
-88-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
-88-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:23-44
+88-->/home/z/my-project/app/src/main/AndroidManifest.xml:52:17-47
+88-->/home/z/my-project/app/src/main/AndroidManifest.xml:52:23-44
 89                <data android:scheme="https" />
-89-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
-89-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:23-44
+89-->/home/z/my-project/app/src/main/AndroidManifest.xml:52:17-47
+89-->/home/z/my-project/app/src/main/AndroidManifest.xml:52:23-44
 90            </intent-filter>
 91
 92            <!-- M3U8 / HLS specific -->
 93            <intent-filter>
-93-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:68:13-76:29
+93-->/home/z/my-project/app/src/main/AndroidManifest.xml:68:13-76:29
 94                <action android:name="android.intent.action.VIEW" />
-94-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:49:17-69
-94-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:49:25-66
+94-->/home/z/my-project/app/src/main/AndroidManifest.xml:49:17-69
+94-->/home/z/my-project/app/src/main/AndroidManifest.xml:49:25-66
 95
 96                <category android:name="android.intent.category.DEFAULT" />
-96-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:17-76
-96-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:27-73
+96-->/home/z/my-project/app/src/main/AndroidManifest.xml:50:17-76
+96-->/home/z/my-project/app/src/main/AndroidManifest.xml:50:27-73
 97                <category android:name="android.intent.category.BROWSABLE" />
-97-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:17-78
-97-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:27-75
+97-->/home/z/my-project/app/src/main/AndroidManifest.xml:51:17-78
+97-->/home/z/my-project/app/src/main/AndroidManifest.xml:51:27-75
 98
 99                <data android:scheme="http" />
-99-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
-99-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:23-44
+99-->/home/z/my-project/app/src/main/AndroidManifest.xml:52:17-47
+99-->/home/z/my-project/app/src/main/AndroidManifest.xml:52:23-44
 100                <data android:scheme="https" />
-100-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
-100-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:23-44
+100-->/home/z/my-project/app/src/main/AndroidManifest.xml:52:17-47
+100-->/home/z/my-project/app/src/main/AndroidManifest.xml:52:23-44
 101                <data android:mimeType="application/x-mpegURL" />
-101-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
-101-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:55:23-49
+101-->/home/z/my-project/app/src/main/AndroidManifest.xml:52:17-47
+101-->/home/z/my-project/app/src/main/AndroidManifest.xml:55:23-49
 102                <data android:mimeType="application/vnd.apple.mpegurl" />
-102-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
-102-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:55:23-49
+102-->/home/z/my-project/app/src/main/AndroidManifest.xml:52:17-47
+102-->/home/z/my-project/app/src/main/AndroidManifest.xml:55:23-49
 103            </intent-filter>
 104
 105            <!-- Shared text (URL from other apps) -->
 106            <intent-filter>
-106-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:79:13-83:29
+106-->/home/z/my-project/app/src/main/AndroidManifest.xml:79:13-83:29
 107                <action android:name="android.intent.action.SEND" />
-107-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:80:17-69
-107-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:80:25-66
+107-->/home/z/my-project/app/src/main/AndroidManifest.xml:80:17-69
+107-->/home/z/my-project/app/src/main/AndroidManifest.xml:80:25-66
 108
 109                <category android:name="android.intent.category.DEFAULT" />
-109-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:17-76
-109-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:27-73
+109-->/home/z/my-project/app/src/main/AndroidManifest.xml:50:17-76
+109-->/home/z/my-project/app/src/main/AndroidManifest.xml:50:27-73
 110
 111                <data android:mimeType="text/plain" />
-111-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
-111-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:55:23-49
+111-->/home/z/my-project/app/src/main/AndroidManifest.xml:52:17-47
+111-->/home/z/my-project/app/src/main/AndroidManifest.xml:55:23-49
 112            </intent-filter>
 113
 114            <!-- Shared video -->
 115            <intent-filter>
-115-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:86:13-90:29
+115-->/home/z/my-project/app/src/main/AndroidManifest.xml:86:13-90:29
 116                <action android:name="android.intent.action.SEND" />
-116-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:80:17-69
-116-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:80:25-66
+116-->/home/z/my-project/app/src/main/AndroidManifest.xml:80:17-69
+116-->/home/z/my-project/app/src/main/AndroidManifest.xml:80:25-66
 117
 118                <category android:name="android.intent.category.DEFAULT" />
-118-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:17-76
-118-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:27-73
+118-->/home/z/my-project/app/src/main/AndroidManifest.xml:50:17-76
+118-->/home/z/my-project/app/src/main/AndroidManifest.xml:50:27-73
 119
 120                <data android:mimeType="video/*" />
-120-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
-120-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:55:23-49
+120-->/home/z/my-project/app/src/main/AndroidManifest.xml:52:17-47
+120-->/home/z/my-project/app/src/main/AndroidManifest.xml:55:23-49
 121            </intent-filter>
 122
 123            <!-- Magnet links -->
 124            <intent-filter>
-124-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:93:13-98:29
+124-->/home/z/my-project/app/src/main/AndroidManifest.xml:93:13-98:29
 125                <action android:name="android.intent.action.VIEW" />
-125-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:49:17-69
-125-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:49:25-66
+125-->/home/z/my-project/app/src/main/AndroidManifest.xml:49:17-69
+125-->/home/z/my-project/app/src/main/AndroidManifest.xml:49:25-66
 126
 127                <category android:name="android.intent.category.DEFAULT" />
-127-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:17-76
-127-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:27-73
+127-->/home/z/my-project/app/src/main/AndroidManifest.xml:50:17-76
+127-->/home/z/my-project/app/src/main/AndroidManifest.xml:50:27-73
 128                <category android:name="android.intent.category.BROWSABLE" />
-128-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:17-78
-128-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:27-75
+128-->/home/z/my-project/app/src/main/AndroidManifest.xml:51:17-78
+128-->/home/z/my-project/app/src/main/AndroidManifest.xml:51:27-75
 129
 130                <data android:scheme="magnet" />
-130-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
-130-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:23-44
+130-->/home/z/my-project/app/src/main/AndroidManifest.xml:52:17-47
+130-->/home/z/my-project/app/src/main/AndroidManifest.xml:52:23-44
 131            </intent-filter>
 132        </activity>
 133
 134        <!-- History Activity -->
 135        <activity
-135-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:102:9-105:58
+135-->/home/z/my-project/app/src/main/AndroidManifest.xml:102:9-105:58
 136            android:name="com.meowplay.tv.ui.HistoryActivity"
-136-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:103:13-47
+136-->/home/z/my-project/app/src/main/AndroidManifest.xml:103:13-47
 137            android:exported="false"
-137-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:104:13-37
+137-->/home/z/my-project/app/src/main/AndroidManifest.xml:104:13-37
 138            android:parentActivityName="com.meowplay.tv.MainActivity" />
-138-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:105:13-55
+138-->/home/z/my-project/app/src/main/AndroidManifest.xml:105:13-55
 139
 140        <!-- Paste Link Activity -->
 141        <activity
-141-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:108:9-111:58
+141-->/home/z/my-project/app/src/main/AndroidManifest.xml:108:9-111:58
 142            android:name="com.meowplay.tv.ui.PasteLinkActivity"
-142-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:109:13-49
+142-->/home/z/my-project/app/src/main/AndroidManifest.xml:109:13-49
 143            android:exported="false"
-143-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:110:13-37
+143-->/home/z/my-project/app/src/main/AndroidManifest.xml:110:13-37
 144            android:parentActivityName="com.meowplay.tv.MainActivity" />
-144-->/home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:111:13-55
+144-->/home/z/my-project/app/src/main/AndroidManifest.xml:111:13-55
 145
 146        <provider
 146-->[androidx.emoji2:emoji2:1.2.0] /home/z/.gradle/caches/transforms-3/70da4e4e1388184bab94ea674e68fd8f/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20

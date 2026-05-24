@@ -29,7 +29,78 @@
         android:padding="24dp"
         android:background="#CC000000" />
 
-    <!-- Glass Controls Overlay -->
+    <!-- BIG Play/Pause Indicator — flashes in center when toggling (like Netflix) -->
+    <ImageView
+        android:id="@+id/play_pause_indicator"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_pause"
+        android:visibility="gone"
+        android:alpha="0"
+        android:padding="12dp"
+        android:background="#66000000"
+        android:contentDescription="Play/Pause" />
+
+    <!-- Seek Indicator — shows "⏪ -10s" briefly when seeking -->
+    <TextView
+        android:id="@+id/seek_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginBottom="80dp"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:alpha="0"
+        android:padding="12dp"
+        android:background="#66000000" />
+
+    <!-- Brief Seek Bar Overlay — shows just the progress bar when seeking (like Netflix) -->
+    <LinearLayout
+        android:id="@+id/seek_bar_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="16dp"
+        android:background="#66000000"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/seek_overlay_current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:00"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:layout_marginEnd="8dp" />
+
+        <SeekBar
+            android:id="@+id/seek_overlay_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="100"
+            android:progress="0"
+            android:progressTint="#BB86FC"
+            android:thumbTint="#BB86FC" />
+
+        <TextView
+            android:id="@+id/seek_overlay_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:00"
+            android:textColor="#808080"
+            android:textSize="14sp"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Glass Controls Overlay — only shown when D-pad UP pressed -->
     <LinearLayout
         android:id="@+id/controls_overlay"
         android:layout_width="match_parent"
@@ -50,14 +121,15 @@
 
             <ImageButton
                 android:id="@+id/btn_back"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:src="@drawable/ic_back"
                 android:background="@drawable/bg_icon_focus"
-                android:padding="8dp"
+                android:padding="10dp"
                 android:contentDescription="Back"
                 android:focusable="true"
-                android:layout_marginEnd="16dp" />
+                android:layout_marginEnd="16dp"
+                android:scaleType="fitCenter" />
 
             <TextView
                 android:id="@+id/txt_title"
@@ -73,25 +145,27 @@
 
             <ImageButton
                 android:id="@+id/btn_pip"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:src="@drawable/ic_pip"
                 android:background="@drawable/bg_icon_focus"
-                android:padding="8dp"
+                android:padding="10dp"
                 android:contentDescription="PiP"
                 android:focusable="true"
-                android:layout_marginStart="8dp" />
+                android:layout_marginStart="8dp"
+                android:scaleType="fitCenter" />
 
             <ImageButton
                 android:id="@+id/btn_info"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:src="@drawable/ic_info"
                 android:background="@drawable/bg_icon_focus"
-                android:padding="8dp"
+                android:padding="10dp"
                 android:contentDescription="Info"
                 android:focusable="true"
-                android:layout_marginStart="8dp" />
+                android:layout_marginStart="8dp"
+                android:scaleType="fitCenter" />
         </LinearLayout>
 
         <!-- Center: Play/Pause + Seek -->
@@ -104,35 +178,38 @@
 
             <ImageButton
                 android:id="@+id/btn_seek_back"
-                android:layout_width="56dp"
-                android:layout_height="56dp"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
                 android:src="@drawable/ic_rewind"
                 android:background="@drawable/bg_icon_focus"
-                android:padding="12dp"
+                android:padding="14dp"
                 android:contentDescription="Rewind 10s"
                 android:focusable="true"
-                android:layout_marginEnd="24dp" />
+                android:layout_marginEnd="32dp"
+                android:scaleType="fitCenter" />
 
             <ImageButton
                 android:id="@+id/btn_play_pause"
-                android:layout_width="72dp"
-                android:layout_height="72dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:src="@drawable/ic_play"
                 android:background="@drawable/bg_btn_primary"
-                android:padding="16dp"
+                android:padding="18dp"
                 android:contentDescription="Play/Pause"
-                android:focusable="true" />
+                android:focusable="true"
+                android:scaleType="fitCenter" />
 
             <ImageButton
                 android:id="@+id/btn_seek_forward"
-                android:layout_width="56dp"
-                android:layout_height="56dp"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
                 android:src="@drawable/ic_forward"
                 android:background="@drawable/bg_icon_focus"
-                android:padding="12dp"
+                android:padding="14dp"
                 android:contentDescription="Forward 10s"
                 android:focusable="true"
-                android:layout_marginStart="24dp" />
+                android:layout_marginStart="32dp"
+                android:scaleType="fitCenter" />
         </LinearLayout>
 
         <!-- Bottom: SeekBar + Time + Buttons -->
@@ -187,61 +264,66 @@
                     android:textColor="#808080"
                     android:textSize="14sp" />
 
-                <!-- Track/Quality Buttons -->
+                <!-- Track/Quality Buttons — BIGGER for TV remote -->
                 <ImageButton
                     android:id="@+id/btn_quality"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
                     android:src="@drawable/ic_quality"
                     android:background="@drawable/bg_icon_focus"
-                    android:padding="6dp"
+                    android:padding="8dp"
                     android:contentDescription="Quality"
                     android:focusable="true"
-                    android:layout_marginStart="4dp" />
+                    android:layout_marginStart="4dp"
+                    android:scaleType="fitCenter" />
 
                 <ImageButton
                     android:id="@+id/btn_audio_track"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
                     android:src="@drawable/ic_audio_track"
                     android:background="@drawable/bg_icon_focus"
-                    android:padding="6dp"
+                    android:padding="8dp"
                     android:contentDescription="Audio"
                     android:focusable="true"
-                    android:layout_marginStart="4dp" />
+                    android:layout_marginStart="4dp"
+                    android:scaleType="fitCenter" />
 
                 <ImageButton
                     android:id="@+id/btn_subtitle"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
                     android:src="@drawable/ic_subtitle"
                     android:background="@drawable/bg_icon_focus"
-                    android:padding="6dp"
+                    android:padding="8dp"
                     android:contentDescription="Subtitle"
                     android:focusable="true"
-                    android:layout_marginStart="4dp" />
+                    android:layout_marginStart="4dp"
+                    android:scaleType="fitCenter" />
 
                 <ImageButton
                     android:id="@+id/btn_speed"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
                     android:src="@drawable/ic_speed"
                     android:background="@drawable/bg_icon_focus"
-                    android:padding="6dp"
+                    android:padding="8dp"
                     android:contentDescription="Speed"
                     android:focusable="true"
-                    android:layout_marginStart="4dp" />
+                    android:layout_marginStart="4dp"
+                    android:scaleType="fitCenter" />
 
                 <ImageButton
                     android:id="@+id/btn_aspect_ratio"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
                     android:src="@drawable/ic_aspect_ratio"
                     android:background="@drawable/bg_icon_focus"
-                    android:padding="6dp"
+                    android:padding="8dp"
                     android:contentDescription="Aspect Ratio"
                     android:focusable="true"
-                    android:layout_marginStart="4dp" />
+                    android:layout_marginStart="4dp"
+                    android:scaleType="fitCenter" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

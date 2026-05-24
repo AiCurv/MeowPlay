@@ -17,6 +17,7 @@ import android.view.View
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.SeekBar
@@ -45,19 +46,26 @@ import kotlinx.coroutines.launch
 import java.io.FileOutputStream
 
 /**
- * FULL-FEATURED VIDEO PLAYER — The core of MeowPlay.
+ * FULL-FEATURED VIDEO PLAYER — Netflix/TV-style remote control.
  *
- * v2 COMPLETE REWRITE:
- * - Glass UI overlay controls
- * - Double-back-to-exit with buffer info
- * - Quality/Audio/Subtitle track selection
- * - Playback speed control
- * - Aspect ratio switching
- * - Audio delay adjustment
- * - Video info display
- * - Screenshot on long-press home
- * - Auto-hide controls
- * - Resume playback
+ * TV REMOTE MAPPING (like Netflix, VLC, MX Player on TV):
+ * ───────────────────────────────────────────────────────
+ * CENTER / OK     = Pause/Resume (NO overlay shown)
+ * LEFT            = Seek back 10s
+ * RIGHT           = Seek forward 10s
+ * LONG-PRESS LEFT = Skip back 30s
+ * LONG-PRESS RIGHT= Skip forward 30s
+ * UP              = Show controls overlay (seekbar + buttons)
+ * DOWN            = Hide controls overlay
+ * BACK (1st)      = Toast "Press back again to leave"
+ * BACK (2nd)      = Exit dialog with buffer info
+ * MENU            = Quality selection
+ *
+ * VISUAL FEEDBACK:
+ * - Big play/pause icon flashes in center when toggling
+ * - Seek indicator shows time jumped + direction arrows
+ * - Progress bar appears briefly when seeking
+ * - All focusable items have BRIGHT purple border (#BB86FC)
  */
 class PlayerActivity : FragmentActivity() {
 
@@ -65,6 +73,9 @@ class PlayerActivity : FragmentActivity() {
         private const val TAG = "MeowPlay"
         private const val AUTO_HIDE_DELAY_MS = 5000L
         private const val DOUBLE_BACK_THRESHOLD_MS = 3000L
+        private const val SEEK_SHORT_MS = 10000L
+        private const val SEEK_LONG_MS = 30000L
+        private const val INDICATOR_DURATION_MS = 800L
     }
 
     private var player: ExoPlayer? = null
@@ -90,6 +101,13 @@ class PlayerActivity : FragmentActivity() {
     private lateinit var btnPip: ImageButton
     private lateinit var btnBack: ImageButton
     private lateinit var btnInfo: ImageButton
+
+    // Brief play/pause indicator (big icon in center)
+    private lateinit var playPauseIndicator: ImageView
+    // Brief seek indicator (shows "⏪ -10s" or "⏩ +30s")
+    private lateinit var seekIndicator: TextView
+    // Brief progress bar overlay (shows seekbar without full controls)
+    private lateinit var seekBarOverlay: View
 
     // Info overlay
     private lateinit var infoOverlay: LinearLayout
@@ -133,6 +151,11 @@ class PlayerActivity : FragmentActivity() {
         btnPip = findViewById(R.id.btn_pip)
         btnBack = findViewById(R.id.btn_back)
         btnInfo = findViewById(R.id.btn_info)
+
+        // Brief indicator overlays
+        playPauseIndicator = findViewById(R.id.play_pause_indicator)
+        seekIndicator = findViewById(R.id.seek_indicator)
+        seekBarOverlay = findViewById(R.id.seek_bar_overlay)
 
         // Info overlay
         infoOverlay = findViewById(R.id.info_overlay)
@@ -178,15 +201,15 @@ class PlayerActivity : FragmentActivity() {
 
     private fun setupControlListeners() {
         btnPlayPause.setOnClickListener {
-            player?.let { if (it.isPlaying) it.pause() else it.play() }
+            togglePlayPause()
         }
 
         btnSeekBack.setOnClickListener {
-            player?.seekTo(maxOf(0, (player?.currentPosition ?: 0) - 10000))
+            doSeek(-SEEK_SHORT_MS)
         }
 
         btnSeekForward.setOnClickListener {
-            player?.seekTo((player?.currentPosition ?: 0) + 10000)
+            doSeek(SEEK_SHORT_MS)
         }
 
         seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
@@ -211,10 +234,80 @@ class PlayerActivity : FragmentActivity() {
         btnPip.setOnClickListener { enterPipMode() }
         btnBack.setOnClickListener { handleBackPress() }
         btnInfo.setOnClickListener { toggleVideoInfo() }
+    }
 
-        // Show controls on tap
-        playerView.setOnClickListener {
-            if (controlsVisible) hideControls() else showControls()
+    // ─── Play/Pause with BIG visual indicator ─────────────────────────────────
+
+    private fun togglePlayPause() {
+        val p = player ?: return
+        if (p.isPlaying) {
+            p.pause()
+            showPlayPauseIndicator(false)
+        } else {
+            p.play()
+            showPlayPauseIndicator(true)
+        }
+    }
+
+    /**
+     * Flash a big play/pause icon in center of screen (like Netflix).
+     * Disappears after 800ms.
+     */
+    private fun showPlayPauseIndicator(isPlaying: Boolean) {
+        playPauseIndicator.setImageResource(if (isPlaying) R.drawable.ic_play else R.drawable.ic_pause)
+        playPauseIndicator.visibility = View.VISIBLE
+        playPauseIndicator.alpha = 1f
+        playPauseIndicator.animate()
+            .alpha(0f)
+            .setDuration(INDICATOR_DURATION_MS)
+            .withEndAction { playPauseIndicator.visibility = View.GONE }
+            .start()
+    }
+
+    // ─── Seek with visual indicator ───────────────────────────────────────────
+
+    private fun doSeek(deltaMs: Long) {
+        val p = player ?: return
+        val newPos = (p.currentPosition + deltaMs).coerceIn(0, p.duration.coerceAtLeast(0))
+        p.seekTo(newPos)
+
+        // Show seek indicator ("⏪ -10s" or "⏩ +30s")
+        val absDelta = Math.abs(deltaMs)
+        val seconds = absDelta / 1000
+        val arrow = if (deltaMs < 0) "⏪" else "⏩"
+        seekIndicator.text = "$arrow ${if (deltaMs < 0) "-" else "+"}${seconds}s"
+        seekIndicator.visibility = View.VISIBLE
+        seekIndicator.alpha = 1f
+        handler.removeCallbacks(hideSeekIndicatorRunnable)
+        handler.postDelayed(hideSeekIndicatorRunnable, INDICATOR_DURATION_MS)
+
+        // Also show brief seek bar overlay (without full controls)
+        showSeekBarOverlay()
+        updateSeekBar()
+    }
+
+    private val hideSeekIndicatorRunnable = Runnable {
+        seekIndicator.animate().alpha(0f).setDuration(200).withEndAction {
+            seekIndicator.visibility = View.GONE
+        }.start()
+    }
+
+    /**
+     * Show just the progress bar area briefly (like Netflix seek).
+     * This is a lighter overlay than the full controls.
+     */
+    private fun showSeekBarOverlay() {
+        seekBarOverlay.visibility = View.VISIBLE
+        seekBarOverlay.alpha = 1f
+        handler.removeCallbacks(hideSeekBarOverlayRunnable)
+        handler.postDelayed(hideSeekBarOverlayRunnable, 3000L)
+    }
+
+    private val hideSeekBarOverlayRunnable = Runnable {
+        if (!controlsVisible) {
+            seekBarOverlay.animate().alpha(0f).setDuration(300).withEndAction {
+                seekBarOverlay.visibility = View.GONE
+            }.start()
         }
     }
 
@@ -223,7 +316,10 @@ class PlayerActivity : FragmentActivity() {
     private fun showControls() {
         controlsVisible = true
         controlsOverlay.visibility = View.VISIBLE
-        controlsOverlay.animate().alpha(1f).setDuration(200).start()
+        controlsOverlay.alpha = 1f
+        seekBarOverlay.visibility = View.GONE // Full controls replace seek overlay
+        // Auto-focus the play/pause button so D-pad works
+        btnPlayPause.requestFocus()
         resetAutoHideTimer()
     }
 
@@ -347,8 +443,6 @@ class PlayerActivity : FragmentActivity() {
         // Auto-resume behavior
         val autoResume = cacheManager.getAutoResume()
         if (positionMs > 0 && autoResume != 2) {
-            // 0 = Always Ask → just resume (simpler for TV)
-            // 1 = Resume from Last Position → resume
             exoPlayer.seekTo(positionMs)
         }
 
@@ -411,9 +505,15 @@ class PlayerActivity : FragmentActivity() {
         }
     }
 
-    // ─── Double-Back-to-Exit (CRITICAL FIX) ──────────────────────────────────
+    // ─── Double-Back-to-Exit ──────────────────────────────────────────────────
 
     private fun handleBackPress() {
+        // If controls are visible, hide them first
+        if (controlsVisible) {
+            hideControls()
+            return
+        }
+
         val now = System.currentTimeMillis()
         if (now - lastBackPressTime < DOUBLE_BACK_THRESHOLD_MS) {
             showExitDialog()
@@ -448,16 +548,144 @@ class PlayerActivity : FragmentActivity() {
         btnNo.setOnClickListener { dialog.dismiss() }
 
         dialog.show()
+        // Auto-focus the No button (safer default)
+        btnNo.requestFocus()
+    }
+
+    // ─── D-Pad / Remote Key Handling — NETFLIX STYLE ─────────────────────────
+    //
+    // This is the #1 most important part of a TV player!
+    //
+    // Netflix/VLC/MX Player on Android TV:
+    //   CENTER = Pause/Resume (the MOST basic thing)
+    //   LEFT   = Seek back
+    //   RIGHT  = Seek forward
+    //   UP     = Show controls
+    //   DOWN   = Hide controls
+    //   BACK   = Exit (double-press)
+    //
+
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        val p = player ?: return super.onKeyDown(keyCode, event)
+
+        when (keyCode) {
+            // ─── CENTER / OK = PAUSE / RESUME ────────────────────────────
+            // This is THE most basic TV player feature. No overlay. Just toggle.
+            KeyEvent.KEYCODE_DPAD_CENTER,
+            KeyEvent.KEYCODE_ENTER,
+            KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE -> {
+                if (controlsVisible) {
+                    // If controls are showing, let the focused button handle it
+                    val focused = currentFocus
+                    if (focused != null && focused is ImageButton) {
+                        // A button is focused, let it do its click
+                        return super.onKeyDown(keyCode, event)
+                    }
+                    // No button focused? Toggle play/pause
+                    togglePlayPause()
+                } else {
+                    // NO overlay — just pause/resume directly!
+                    togglePlayPause()
+                }
+                return true
+            }
+
+            // ─── LEFT = SEEK BACK ────────────────────────────────────────
+            KeyEvent.KEYCODE_DPAD_LEFT -> {
+                if (controlsVisible) {
+                    // Let D-pad navigate between buttons
+                    return super.onKeyDown(keyCode, event)
+                }
+                // No controls visible → seek back
+                val increment = if (event?.repeatCount != null && event.repeatCount > 3) SEEK_LONG_MS else SEEK_SHORT_MS
+                doSeek(-increment)
+                return true
+            }
+
+            // ─── RIGHT = SEEK FORWARD ────────────────────────────────────
+            KeyEvent.KEYCODE_DPAD_RIGHT -> {
+                if (controlsVisible) {
+                    return super.onKeyDown(keyCode, event)
+                }
+                val increment = if (event?.repeatCount != null && event.repeatCount > 3) SEEK_LONG_MS else SEEK_SHORT_MS
+                doSeek(increment)
+                return true
+            }
+
+            // ─── UP = SHOW CONTROLS ──────────────────────────────────────
+            KeyEvent.KEYCODE_DPAD_UP -> {
+                if (!controlsVisible) {
+                    showControls()
+                }
+                return true
+            }
+
+            // ─── DOWN = HIDE CONTROLS ────────────────────────────────────
+            KeyEvent.KEYCODE_DPAD_DOWN -> {
+                if (controlsVisible) {
+                    hideControls()
+                }
+                return true
+            }
+
+            // ─── MEDIA KEYS ─────────────────────────────────────────────
+            KeyEvent.KEYCODE_MEDIA_FAST_FORWARD -> {
+                doSeek(SEEK_SHORT_MS)
+                return true
+            }
+            KeyEvent.KEYCODE_MEDIA_REWIND -> {
+                doSeek(-SEEK_SHORT_MS)
+                return true
+            }
+
+            // ─── BACK = EXIT (double-press) ──────────────────────────────
+            KeyEvent.KEYCODE_BACK -> {
+                handleBackPress()
+                return true
+            }
+
+            // ─── MENU = QUALITY SELECTION ────────────────────────────────
+            KeyEvent.KEYCODE_MENU -> {
+                showQualityDialog()
+                return true
+            }
+        }
+        return super.onKeyDown(keyCode, event)
+    }
+
+    override fun onKeyLongPress(keyCode: Int, event: KeyEvent?): Boolean {
+        val p = player ?: return super.onKeyLongPress(keyCode, event)
+
+        when (keyCode) {
+            // Long-press LEFT = skip back 30s
+            KeyEvent.KEYCODE_DPAD_LEFT -> {
+                if (!controlsVisible) {
+                    doSeek(-SEEK_LONG_MS)
+                    return true
+                }
+            }
+            // Long-press RIGHT = skip forward 30s
+            KeyEvent.KEYCODE_DPAD_RIGHT -> {
+                if (!controlsVisible) {
+                    doSeek(SEEK_LONG_MS)
+                    return true
+                }
+            }
+            // Long-press HOME = screenshot (in-player only)
+            KeyEvent.KEYCODE_HOME -> {
+                takeScreenshot()
+                return true
+            }
+        }
+        return super.onKeyLongPress(keyCode, event)
     }
 
     // ─── Quality / Track Selection Dialogs ────────────────────────────────────
-    // NOTE: We use ONLY setSingleChoiceItems — NEVER setMessage() + setSingleChoiceItems() together!
 
     private fun showQualityDialog() {
         val ts = trackSelector ?: return
         val mappedTrackInfo = ts.currentMappedTrackInfo ?: return
 
-        // Find video track groups
         val videoTrackGroups = mutableListOf<TrackGroup>()
         for (i in 0 until mappedTrackInfo.rendererCount) {
             if (mappedTrackInfo.getRendererType(i) == C.TRACK_TYPE_VIDEO) {
@@ -491,45 +719,18 @@ class PlayerActivity : FragmentActivity() {
             }
         }
 
-        val dialog = Dialog(this, R.style.GlassDialog)
-        dialog.setContentView(R.layout.dialog_track_selection)
-        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
-
-        val txtDialogTitle = dialog.findViewById<TextView>(R.id.txt_dialog_title)
-        val trackListLayout = dialog.findViewById<LinearLayout>(R.id.track_list_layout)
-
-        txtDialogTitle.text = "Video Quality"
-
-        labels.forEachIndexed { index, label ->
-            val btn = Button(this).apply {
-                text = label
-                setTextColor(if (index == 0) 0xFFBB86FC.toInt() else 0xFFFFFFFF.toInt())
-                setBackgroundColor(0x1A1A2E.toInt())
-                setPadding(24, 16, 24, 16)
-                textSize = 16f
-                isFocusable = true
-                setOnFocusChangeListener { v, hasFocus ->
-                    v.setBackgroundColor(if (hasFocus) 0x2D2D5E.toInt() else 0x1A1A2E.toInt())
-                }
-                setOnClickListener {
-                    if (index == 0) {
-                        // Auto — clear overrides
-                        ts.setParameters(ts.buildUponParameters().clearVideoSizeConstraints())
-                    } else {
-                        val format = formats[index] ?: return@setOnClickListener
-                        val params = ts.buildUponParameters()
-                            .setMaxVideoSize(format.width, format.height)
-                            .setMinVideoSize(format.width, format.height)
-                        ts.setParameters(params)
-                    }
-                    Toast.makeText(this@PlayerActivity, "Quality: $label", Toast.LENGTH_SHORT).show()
-                    dialog.dismiss()
-                }
+        showTvSelectionDialog("Video Quality", labels) { idx ->
+            if (idx == 0) {
+                ts.setParameters(ts.buildUponParameters().clearVideoSizeConstraints())
+            } else {
+                val format = formats[idx] ?: return@showTvSelectionDialog
+                val params = ts.buildUponParameters()
+                    .setMaxVideoSize(format.width, format.height)
+                    .setMinVideoSize(format.width, format.height)
+                ts.setParameters(params)
             }
-            trackListLayout.addView(btn)
+            Toast.makeText(this, "Quality: ${labels[idx]}", Toast.LENGTH_SHORT).show()
         }
-
-        dialog.show()
     }
 
     private fun showAudioTrackDialog() {
@@ -564,8 +765,7 @@ class PlayerActivity : FragmentActivity() {
             }
         }
 
-        showSimpleSelectionDialog("Audio Track", labels) { which ->
-            // For now just notify — full track override requires more complex logic
+        showTvSelectionDialog("Audio Track", labels) { which ->
             Toast.makeText(this, "Audio: ${labels[which]}", Toast.LENGTH_SHORT).show()
         }
     }
@@ -592,23 +792,11 @@ class PlayerActivity : FragmentActivity() {
             }
         }
 
-        showSimpleSelectionDialog("Subtitle Track", labels) { which ->
+        showTvSelectionDialog("Subtitle Track", labels) { which ->
             when (which) {
-                0 -> {
-                    val params = ts.buildUponParameters()
-                        .setTrackTypeDisabled(C.TRACK_TYPE_TEXT, true)
-                    ts.setParameters(params)
-                }
-                1 -> {
-                    val params = ts.buildUponParameters()
-                        .setTrackTypeDisabled(C.TRACK_TYPE_TEXT, false)
-                    ts.setParameters(params)
-                }
-                else -> {
-                    val params = ts.buildUponParameters()
-                        .setTrackTypeDisabled(C.TRACK_TYPE_TEXT, false)
-                    ts.setParameters(params)
-                }
+                0 -> ts.setParameters(ts.buildUponParameters().setTrackTypeDisabled(C.TRACK_TYPE_TEXT, true))
+                1 -> ts.setParameters(ts.buildUponParameters().setTrackTypeDisabled(C.TRACK_TYPE_TEXT, false))
+                else -> ts.setParameters(ts.buildUponParameters().setTrackTypeDisabled(C.TRACK_TYPE_TEXT, false))
             }
             Toast.makeText(this, "Subtitle: ${labels[which]}", Toast.LENGTH_SHORT).show()
         }
@@ -618,7 +806,7 @@ class PlayerActivity : FragmentActivity() {
         val speeds = floatArrayOf(0.5f, 0.75f, 1.0f, 1.25f, 1.5f, 2.0f)
         val labels = speeds.map { if (it == 1.0f) "1.0x (Normal)" else "${it}x" }
 
-        showSimpleSelectionDialog("Playback Speed", labels) { which ->
+        showTvSelectionDialog("Playback Speed", labels) { which ->
             player?.setPlaybackSpeed(speeds[which])
             CacheManager.getInstance(this).setPlaybackSpeed(speeds[which])
             Toast.makeText(this, "Speed: ${labels[which]}", Toast.LENGTH_SHORT).show()
@@ -627,7 +815,7 @@ class PlayerActivity : FragmentActivity() {
 
     private fun showAspectRatioDialog() {
         val labels = listOf("Default", "16:9", "4:3", "Fill Screen", "Crop")
-        showSimpleSelectionDialog("Aspect Ratio", labels) { which ->
+        showTvSelectionDialog("Aspect Ratio", labels) { which ->
             val cm = CacheManager.getInstance(this)
             cm.setAspectRatio(which)
             applyAspectRatio(which)
@@ -635,19 +823,11 @@ class PlayerActivity : FragmentActivity() {
         }
     }
 
-    private fun applyAspectRatio(mode: Int) {
-        // Apply aspect ratio to PlayerView's surface
-        val surface = playerView.videoSurfaceView as? SurfaceView ?: return
-        when (mode) {
-            0 -> playerView.resizeMode = androidx.media3.ui.AspectRatioFrameLayout.RESIZE_MODE_FIT
-            1 -> playerView.resizeMode = androidx.media3.ui.AspectRatioFrameLayout.RESIZE_MODE_FIXED_WIDTH
-            2 -> playerView.resizeMode = androidx.media3.ui.AspectRatioFrameLayout.RESIZE_MODE_FIXED_HEIGHT
-            3 -> playerView.resizeMode = androidx.media3.ui.AspectRatioFrameLayout.RESIZE_MODE_FILL
-            4 -> playerView.resizeMode = androidx.media3.ui.AspectRatioFrameLayout.RESIZE_MODE_ZOOM
-        }
-    }
-
-    private fun showSimpleSelectionDialog(title: String, items: List<String>, onSelect: (Int) -> Unit) {
+    /**
+     * TV-optimized selection dialog — BRIGHT focus, BIG text, D-pad friendly.
+     * Every option gets a visible purple border when focused.
+     */
+    private fun showTvSelectionDialog(title: String, items: List<String>, onSelect: (Int) -> Unit) {
         val dialog = Dialog(this, R.style.GlassDialog)
         dialog.setContentView(R.layout.dialog_track_selection)
         dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
@@ -661,12 +841,17 @@ class PlayerActivity : FragmentActivity() {
             val btn = Button(this).apply {
                 text = label
                 setTextColor(0xFFFFFFFF.toInt())
-                setBackgroundColor(0x1A1A2E.toInt())
-                setPadding(24, 16, 24, 16)
-                textSize = 16f
+                textSize = 18f  // BIGGER text for TV
                 isFocusable = true
+                isFocusableInTouchMode = false
+                setPadding(32, 20, 32, 20)
+                // Default background
+                background = createTvButtonBackground(false)
                 setOnFocusChangeListener { v, hasFocus ->
-                    v.setBackgroundColor(if (hasFocus) 0x2D2D5E.toInt() else 0x1A1A2E.toInt())
+                    v.background = createTvButtonBackground(hasFocus)
+                    v.animate().scaleX(if (hasFocus) 1.03f else 1.0f)
+                        .scaleY(if (hasFocus) 1.03f else 1.0f)
+                        .setDuration(100).start()
                 }
                 setOnClickListener {
                     onSelect(index)
@@ -677,6 +862,30 @@ class PlayerActivity : FragmentActivity() {
         }
 
         dialog.show()
+        // Auto-focus first item
+        trackListLayout.getChildAt(0)?.requestFocus()
+    }
+
+    /**
+     * Create a TV-friendly button background with BRIGHT visible focus border.
+     */
+    private fun createTvButtonBackground(focused: Boolean) = android.graphics.drawable.GradientDrawable().apply {
+        setColor(if (focused) 0x3D3D6E else 0xFF1A1A2E.toInt())
+        cornerRadius = 12f
+        if (focused) {
+            // BRIGHT PURPLE BORDER — visible from across the room!
+            setStroke(3, 0xFFBB86FC.toInt())
+        }
+    }
+
+    private fun applyAspectRatio(mode: Int) {
+        when (mode) {
+            0 -> playerView.resizeMode = androidx.media3.ui.AspectRatioFrameLayout.RESIZE_MODE_FIT
+            1 -> playerView.resizeMode = androidx.media3.ui.AspectRatioFrameLayout.RESIZE_MODE_FIXED_WIDTH
+            2 -> playerView.resizeMode = androidx.media3.ui.AspectRatioFrameLayout.RESIZE_MODE_FIXED_HEIGHT
+            3 -> playerView.resizeMode = androidx.media3.ui.AspectRatioFrameLayout.RESIZE_MODE_FILL
+            4 -> playerView.resizeMode = androidx.media3.ui.AspectRatioFrameLayout.RESIZE_MODE_ZOOM
+        }
     }
 
     // ─── Video Info Display ───────────────────────────────────────────────────
@@ -740,7 +949,6 @@ class PlayerActivity : FragmentActivity() {
         try {
             val surface = playerView.videoSurfaceView as? SurfaceView ?: return
             val bitmap = Bitmap.createBitmap(surface.width, surface.height, Bitmap.Config.ARGB_8888)
-            // Note: PixelCopy is API 24+, for lower APIs this won't capture video content
             val dir = android.os.Environment.getExternalStoragePublicDirectory(android.os.Environment.DIRECTORY_PICTURES)
             val meowDir = java.io.File(dir, "MeowPlay")
             if (!meowDir.exists()) meowDir.mkdirs()
@@ -753,69 +961,6 @@ class PlayerActivity : FragmentActivity() {
         } catch (e: Exception) {
             Toast.makeText(this, "Screenshot failed: ${e.message}", Toast.LENGTH_SHORT).show()
         }
-    }
-
-    // ─── D-Pad / Remote Key Handling ──────────────────────────────────────────
-
-    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
-        val p = player ?: return super.onKeyDown(keyCode, event)
-
-        when (keyCode) {
-            KeyEvent.KEYCODE_DPAD_CENTER,
-            KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE -> {
-                if (controlsVisible) {
-                    if (p.isPlaying) p.pause() else p.play()
-                } else {
-                    showControls()
-                }
-                return true
-            }
-            KeyEvent.KEYCODE_DPAD_RIGHT,
-            KeyEvent.KEYCODE_MEDIA_FAST_FORWARD -> {
-                val increment = if (event?.isLongPress == true) 30000L else 10000L
-                p.seekTo(p.currentPosition + increment)
-                showControls()
-                return true
-            }
-            KeyEvent.KEYCODE_DPAD_LEFT,
-            KeyEvent.KEYCODE_MEDIA_REWIND -> {
-                val increment = if (event?.isLongPress == true) 30000L else 10000L
-                p.seekTo(maxOf(0, p.currentPosition - increment))
-                showControls()
-                return true
-            }
-            KeyEvent.KEYCODE_DPAD_UP -> {
-                showControls()
-                return true
-            }
-            KeyEvent.KEYCODE_DPAD_DOWN -> {
-                if (controlsVisible) hideControls()
-                return true
-            }
-            KeyEvent.KEYCODE_BACK -> {
-                handleBackPress()
-                return true
-            }
-            KeyEvent.KEYCODE_MENU -> {
-                showQualityDialog()
-                return true
-            }
-            KeyEvent.KEYCODE_HOME -> {
-                if (event?.isLongPress == true) {
-                    takeScreenshot()
-                    return true
-                }
-            }
-        }
-        return super.onKeyDown(keyCode, event)
-    }
-
-    override fun onKeyLongPress(keyCode: Int, event: KeyEvent?): Boolean {
-        if (keyCode == KeyEvent.KEYCODE_HOME) {
-            takeScreenshot()
-            return true
-        }
-        return super.onKeyLongPress(keyCode, event)
     }
 
     // ─── Error Handling ───────────────────────────────────────────────────────
