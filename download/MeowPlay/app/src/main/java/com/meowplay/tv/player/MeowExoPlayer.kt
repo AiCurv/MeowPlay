@@ -2,6 +2,8 @@ package com.meowplay.tv.player
 
 import android.content.Context
 import android.net.Uri
+import android.os.Handler
+import android.os.Looper
 import androidx.media3.common.C
 import androidx.media3.common.MediaItem
 import androidx.media3.common.PlaybackException
@@ -10,6 +12,10 @@ import androidx.media3.datasource.DefaultHttpDataSource
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.exoplayer.source.DefaultMediaSourceFactory
 import com.meowplay.tv.data.HistoryRepository
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.launch
 
 /**
  * MeowExoPlayer — Wraps Media3 ExoPlayer with advanced cache integration.
@@ -29,6 +35,7 @@ class MeowExoPlayer(
 
     private val cacheManager = CacheManager.getInstance(context)
     private val historyRepository = HistoryRepository.getInstance(context)
+    private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
     var player: ExoPlayer? = null
         private set
@@ -62,9 +69,8 @@ class MeowExoPlayer(
                 onPlaybackStateChanged(playbackState)
 
                 if (playbackState == Player.STATE_ENDED) {
-                    // Save final position as complete
                     currentUrl?.let { url ->
-                        historyRepository.updatePosition(url, 0L)
+                        scope.launch { historyRepository.updatePosition(url, 0L) }
                     }
                     stopPositionTracking()
                 }
@@ -114,8 +120,8 @@ class MeowExoPlayer(
         exoPlayer.prepare()
         exoPlayer.playWhenReady = true
 
-        // Add to history
-        historyRepository.addOrUpdateEntry(url = url, title = title)
+        // Add to history (suspend call in coroutine)
+        scope.launch { historyRepository.addOrUpdateEntry(url = url, title = title) }
 
         // Start position tracking
         startPositionTracking()
@@ -169,7 +175,7 @@ class MeowExoPlayer(
         val url = currentUrl ?: return
         val position = player?.currentPosition ?: 0L
         if (position > 0) {
-            historyRepository.updatePosition(url, position)
+            scope.launch { historyRepository.updatePosition(url, position) }
         }
     }
 
@@ -178,7 +184,7 @@ class MeowExoPlayer(
         val url = currentUrl ?: return
         val duration = player?.duration ?: 0L
         if (duration > 0 && duration != C.TIME_UNSET) {
-            historyRepository.updateDuration(url, duration)
+            scope.launch { historyRepository.updateDuration(url, duration) }
         }
     }
 
@@ -203,7 +209,7 @@ class MeowExoPlayer(
 
             // Schedule next update
             if (isTrackingPosition) {
-                android.os.Handler(android.os.Looper.getMainLooper())
+                Handler(Looper.getMainLooper())
                     .postDelayed(this, 1000) // Save position every second
             }
         }
@@ -211,7 +217,7 @@ class MeowExoPlayer(
 
     private fun startPositionTracking() {
         isTrackingPosition = true
-        android.os.Handler(android.os.Looper.getMainLooper())
+        Handler(Looper.getMainLooper())
             .postDelayed(positionTrackingRunnable, 1000)
     }
 
