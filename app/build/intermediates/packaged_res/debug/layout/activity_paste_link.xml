@@ -3,41 +3,70 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/background_dark"
+    android:background="#121212"
     android:padding="24dp"
-    android:gravity="center">
+    android:gravity="center_horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Paste Video Link"
-        android:textColor="@color/text_primary"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="16dp" />
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="24dp">
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Back"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/bg_btn_focus"
+            android:focusable="true"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Paste Video Link"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <EditText
         android:id="@+id/paste_url_input"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:hint="Paste URL here..."
-        android:textColorHint="@color/text_hint"
-        android:textColor="@color/text_primary"
-        android:background="@drawable/bg_input"
+        android:hint="Paste video URL here..."
+        android:textColorHint="#808080"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/bg_input_focus"
         android:padding="12dp"
         android:singleLine="true"
         android:imeOptions="actionGo"
         android:inputType="textUri"
+        android:focusable="true"
         android:layout_marginBottom="16dp" />
 
-    <ImageView
-        android:id="@+id/paste_play_button"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:src="@drawable/ic_play"
-        android:padding="12dp"
-        android:background="@drawable/bg_button_primary"
-        android:contentDescription="Play"
-        android:focusable="true" />
+    <Button
+        android:id="@+id/paste_play_btn"
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:text="Play"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/bg_btn_primary"
+        android:focusable="true"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Supported: MP4, MKV, M3U8/HLS, DASH, WebM, FLV, MOV\n\nWorks with: Stremio, CloudStream, Kodi"
+        android:textColor="#808080"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp" />
 
 </LinearLayout>

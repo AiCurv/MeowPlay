@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.meowplay.tv.app-mergeDebugResources-51:/values-w320dp-land-v13/values-w320dp-land-v13.xml",
+            "outputFile": "com.meowplay.tv.app-mergeDebugResources-47:/values-w320dp-land-v13/values-w320dp-land-v13.xml",
             "map": [
                 {
                     "source": "/home/z/.gradle/caches/transforms-3/cac83076d76b42ce7a57dce6976e60b0/transformed/material-1.11.0/res/values-w320dp-land-v13/values-w320dp-land-v13.xml",

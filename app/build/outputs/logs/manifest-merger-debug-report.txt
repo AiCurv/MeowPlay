@@ -1,17 +1,16 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:2:1-161:12
-INJECTED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:2:1-161:12
-INJECTED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:2:1-161:12
-INJECTED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:2:1-161:12
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:2:1-114:12
+INJECTED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:2:1-114:12
+INJECTED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:2:1-114:12
+INJECTED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:2:1-114:12
 MERGED from [androidx.databinding:viewbinding:8.2.2] /home/z/.gradle/caches/transforms-3/cd7033bdba3c138446569f308066241e/transformed/viewbinding-8.2.2/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.11.0] /home/z/.gradle/caches/transforms-3/cac83076d76b42ce7a57dce6976e60b0/transformed/material-1.11.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/z/.gradle/caches/transforms-3/57b4b9083cd9037ee5d1cd7ce1f14350/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.leanback:leanback-preference:1.0.0] /home/z/.gradle/caches/transforms-3/0cacf6748a367e78736ac2982745aebe/transformed/leanback-preference-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/z/.gradle/caches/transforms-3/3bd65c883a3780210bdf89bcd9caf597/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.preference:preference-ktx:1.2.1] /home/z/.gradle/caches/transforms-3/85d20f5315390e5843ca07274e4b7582/transformed/preference-ktx-1.2.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/z/.gradle/caches/transforms-3/d12c9f35034cd66f65318ddfef3adbff/transformed/constraintlayout-2.0.1/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.legacy:legacy-preference-v14:1.0.0] /home/z/.gradle/caches/transforms-3/73124720769e04ab97ff0e1fef9533b6/transformed/legacy-preference-v14-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.preference:preference:1.2.1] /home/z/.gradle/caches/transforms-3/cdfd712cbaa951128fdf17cf287d879a/transformed/preference-1.2.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.preference:preference:1.0.0] /home/z/.gradle/caches/transforms-3/27505173dec19c455d8adbcf7170edbc/transformed/preference-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat:1.6.1] /home/z/.gradle/caches/transforms-3/5c5f7c6de7640bef4d5fdbb070566b52/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.leanback:leanback:1.0.0] /home/z/.gradle/caches/transforms-3/a8e8a16452b315a278d04f75c8fa156f/transformed/leanback-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/z/.gradle/caches/transforms-3/6aad382154bcce11db3751d65b662e01/transformed/viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
@@ -20,7 +19,6 @@ MERGED from [androidx.fragment:fragment-ktx:1.6.2] /home/z/.gradle/caches/transf
 MERGED from [androidx.activity:activity:1.8.2] /home/z/.gradle/caches/transforms-3/e013323023ae21a52cd28e6dfc69827b/transformed/activity-1.8.2/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.activity:activity-ktx:1.8.2] /home/z/.gradle/caches/transforms-3/904b63528a5c0793d2b6fe10e89097a6/transformed/activity-ktx-1.8.2/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.media3:media3-datasource-okhttp:1.3.0] /home/z/.gradle/caches/transforms-3/74e36d5571a37030e8a11decf5f12d0b/transformed/media3-datasource-okhttp-1.3.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.media3:media3-session:1.3.0] /home/z/.gradle/caches/transforms-3/313a43e87180fe31244f4a31d716de4b/transformed/media3-session-1.3.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.media3:media3-datasource:1.3.0] /home/z/.gradle/caches/transforms-3/9bcf744a0bd31b7140ca3ea0e70340ac/transformed/media3-datasource-1.3.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.media3:media3-ui:1.3.0] /home/z/.gradle/caches/transforms-3/2c2416b3b28a2397816e2240984535d8/transformed/media3-ui-1.3.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.media3:media3-extractor:1.3.0] /home/z/.gradle/caches/transforms-3/2f4b55dc690f2145134db49249790deb/transformed/media3-extractor-1.3.0/AndroidManifest.xml:17:1-22:12
@@ -38,6 +36,7 @@ MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/z/.gradle/cache
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/z/.gradle/caches/transforms-3/03565a2fc0c6fdb7cd7f5dc176ac1d62/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/z/.gradle/caches/transforms-3/2a59d275ade8115707c51800d3b23d3d/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/z/.gradle/caches/transforms-3/319c3da21ef6892808972c6722ccaffb/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] /home/z/.gradle/caches/transforms-3/fa410d01724addcdeb2a94f03df651f6/transformed/transition-1.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/z/.gradle/caches/transforms-3/de2e10411dfc142daa4759e08703bff2/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/z/.gradle/caches/transforms-3/d34b4aa699b6277c5f0cb61232e8031b/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.media:media:1.7.0] /home/z/.gradle/caches/transforms-3/d8c3b5471ae37228b1195ac5c56d9bfa/transformed/media-1.7.0/AndroidManifest.xml:2:1-7:12
@@ -45,22 +44,20 @@ MERGED from [androidx.recyclerview:recyclerview:1.3.0] /home/z/.gradle/caches/tr
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/z/.gradle/caches/transforms-3/188f9e65e407813d71f99a376e42d394/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] /home/z/.gradle/caches/transforms-3/97c557398ba91b3cdfce3b60ea5202f8/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/z/.gradle/caches/transforms-3/867cc628b3b432b8976b9fe747141c66/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /home/z/.gradle/caches/transforms-3/61e841b3b0327f553108e38a1b6a2f2e/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/z/.gradle/caches/transforms-3/de20669937f68aa8797c4680ba80b49c/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.customview:customview:1.1.0] /home/z/.gradle/caches/transforms-3/870c56e08d118c9344f581b3a97a590d/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/z/.gradle/caches/transforms-3/3b5bf6890215a6b6e31cad5967d2eff6/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/z/.gradle/caches/transforms-3/6966dfcb044a26064e73419f48e0ed02/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.transition:transition:1.4.1] /home/z/.gradle/caches/transforms-3/32de66921ec4960ec68de9bf512fce67/transformed/transition-1.4.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.window:window:1.0.0] /home/z/.gradle/caches/transforms-3/8db6ed26f395c1f8973398108f107018/transformed/window-1.0.0/AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.core:core:1.12.0] /home/z/.gradle/caches/transforms-3/05365192e8c93a127ae620124358980f/transformed/core-1.12.0/AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /home/z/.gradle/caches/transforms-3/e212d6daf7437ae4cee342febb5553a2/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate:1.2.1] /home/z/.gradle/caches/transforms-3/309c05ea582d94d01c6ee988cfa77b91/transformed/savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] /home/z/.gradle/caches/transforms-3/3dfeffd36e8b2cb5f39020000d0e42ba/transformed/lifecycle-livedata-core-2.7.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/z/.gradle/caches/transforms-3/b5aa617bebe5bc4c2ae6066dd8ccfdbb/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:17:1-35:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] /home/z/.gradle/caches/transforms-3/d967a84d41ba3aa022a0892df2e835c1/transformed/lifecycle-livedata-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] /home/z/.gradle/caches/transforms-3/bb15a68eaa27a702c74c411b29cd3dab/transformed/lifecycle-viewmodel-ktx-2.7.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /home/z/.gradle/caches/transforms-3/27fffcffbc8070378c9ce31fe8f59dec/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] /home/z/.gradle/caches/transforms-3/d64b0c791d6e535a5ddaa802b13ee659/transformed/lifecycle-livedata-core-ktx-2.7.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /home/z/.gradle/caches/transforms-3/56a17571f823274c2af15e7dde5c3b9a/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] /home/z/.gradle/caches/transforms-3/bb15a68eaa27a702c74c411b29cd3dab/transformed/lifecycle-viewmodel-ktx-2.7.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] /home/z/.gradle/caches/transforms-3/4aae9911e679b41eaa6b5a36e359b947/transformed/lifecycle-runtime-ktx-2.7.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.7.0] /home/z/.gradle/caches/transforms-3/7e0d1575f1044c6e0b915eace251405b/transformed/lifecycle-livedata-ktx-2.7.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /home/z/.gradle/caches/transforms-3/5534b4ac55b208a1b05072588e5f5672/transformed/lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:17:1-22:12
@@ -94,64 +91,48 @@ MERGED from [androidx.print:print:1.0.0] /home/z/.gradle/caches/transforms-3/b45
 	xmlns:android
 		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:6:5-67
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:5:5-67
 	android:name
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:6:22-64
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:5:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:7:5-79
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:6:5-79
 MERGED from [androidx.media3:media3-common:1.3.0] /home/z/.gradle/caches/transforms-3/e00bffd85e0650285882214a8c760051/transformed/media3-common-1.3.0/AndroidManifest.xml:22:5-79
 MERGED from [androidx.media3:media3-common:1.3.0] /home/z/.gradle/caches/transforms-3/e00bffd85e0650285882214a8c760051/transformed/media3-common-1.3.0/AndroidManifest.xml:22:5-79
 MERGED from [androidx.media3:media3-exoplayer:1.3.0] /home/z/.gradle/caches/transforms-3/2cf9135090ab38d6583755acf4413296/transformed/media3-exoplayer-1.3.0/AndroidManifest.xml:22:5-79
 MERGED from [androidx.media3:media3-exoplayer:1.3.0] /home/z/.gradle/caches/transforms-3/2cf9135090ab38d6583755acf4413296/transformed/media3-exoplayer-1.3.0/AndroidManifest.xml:22:5-79
 	android:name
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:7:22-76
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:6:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:8:5-76
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:7:5-76
 	android:name
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:8:22-73
-uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:9:5-80
-	android:name
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:9:22-77
-uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:10:5-11:38
-	android:maxSdkVersion
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:11:9-35
-	android:name
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:10:22-78
-uses-permission#android.permission.FOREGROUND_SERVICE
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:12:5-77
-	android:name
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:12:22-74
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:7:22-73
 uses-feature#android.software.leanback
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:15:5-16:36
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:10:5-87
 	android:required
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:16:9-33
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:10:60-84
 	android:name
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:15:19-59
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:10:19-59
 uses-feature#android.hardware.touchscreen
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:17:5-18:36
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:11:5-90
 	android:required
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:18:9-33
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:11:63-87
 	android:name
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:17:19-62
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:11:19-62
 uses-feature#android.hardware.type.television
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:19:5-20:36
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:12:5-94
 	android:required
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:20:9-33
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:12:67-91
 	android:name
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:19:19-66
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:12:19-66
 application
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:22:5-160:19
-INJECTED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:22:5-160:19
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:14:5-113:19
+INJECTED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:14:5-113:19
 MERGED from [com.google.android.material:material:1.11.0] /home/z/.gradle/caches/transforms-3/cac83076d76b42ce7a57dce6976e60b0/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] /home/z/.gradle/caches/transforms-3/cac83076d76b42ce7a57dce6976e60b0/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/z/.gradle/caches/transforms-3/57b4b9083cd9037ee5d1cd7ce1f14350/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/z/.gradle/caches/transforms-3/57b4b9083cd9037ee5d1cd7ce1f14350/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/z/.gradle/caches/transforms-3/d12c9f35034cd66f65318ddfef3adbff/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/z/.gradle/caches/transforms-3/d12c9f35034cd66f65318ddfef3adbff/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
 MERGED from [androidx.emoji2:emoji2:1.2.0] /home/z/.gradle/caches/transforms-3/70da4e4e1388184bab94ea674e68fd8f/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.emoji2:emoji2:1.2.0] /home/z/.gradle/caches/transforms-3/70da4e4e1388184bab94ea674e68fd8f/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.window:window:1.0.0] /home/z/.gradle/caches/transforms-3/8db6ed26f395c1f8973398108f107018/transformed/window-1.0.0/AndroidManifest.xml:24:5-31:19
-MERGED from [androidx.window:window:1.0.0] /home/z/.gradle/caches/transforms-3/8db6ed26f395c1f8973398108f107018/transformed/window-1.0.0/AndroidManifest.xml:24:5-31:19
 MERGED from [androidx.core:core:1.12.0] /home/z/.gradle/caches/transforms-3/05365192e8c93a127ae620124358980f/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
 MERGED from [androidx.core:core:1.12.0] /home/z/.gradle/caches/transforms-3/05365192e8c93a127ae620124358980f/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
 MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/z/.gradle/caches/transforms-3/b5aa617bebe5bc4c2ae6066dd8ccfdbb/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:23:5-33:19
@@ -169,119 +150,111 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /home/z/.gradle/caches/tran
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.12.0] /home/z/.gradle/caches/transforms-3/05365192e8c93a127ae620124358980f/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:29:9-35
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:21:9-35
 	android:label
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:27:9-41
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:19:9-41
 	tools:targetApi
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:31:9-29
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:24:9-29
 	android:icon
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:26:9-43
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:18:9-43
 	android:allowBackup
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:24:9-35
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:16:9-35
 	android:banner
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:25:9-46
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:17:9-46
 	android:theme
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:30:9-46
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:22:9-46
 	android:logo
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:28:9-43
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:20:9-43
+	android:usesCleartextTraffic
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:23:9-44
 	android:name
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:23:9-36
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:15:9-36
 activity#com.meowplay.tv.MainActivity
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:34:9-44:20
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:27:9-37:20
 	android:screenOrientation
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:37:13-50
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:30:13-50
 	android:exported
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:36:13-36
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:29:13-36
 	android:configChanges
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:38:13-115
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:31:13-115
 	android:name
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:35:13-41
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:28:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER+category:name:android.intent.category.LEANBACK_LAUNCHER
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:39:13-43:29
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:32:13-36:29
 action#android.intent.action.MAIN
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:40:17-69
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:33:17-69
 	android:name
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:40:25-66
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:33:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:41:17-77
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:34:17-77
 	android:name
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:41:27-74
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:34:27-74
 category#android.intent.category.LEANBACK_LAUNCHER
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:42:17-86
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:35:17-86
 	android:name
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:42:27-83
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:35:27-83
 activity#com.meowplay.tv.player.PlayerActivity
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:47:9-145:20
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:40:9-99:20
 	android:screenOrientation
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:13-50
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:43:13-50
 	android:exported
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:49:13-36
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:42:13-36
 	android:configChanges
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:13-115
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:44:13-115
 	android:theme
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:13-57
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:45:13-57
 	android:name
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:48:13-50
-intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:mimeType:video/*+data:scheme:http+data:scheme:https
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:55:13-64:29
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:41:13-50
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:mimeType:video/*+data:scheme:content+data:scheme:http+data:scheme:https
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:48:13-56:29
 action#android.intent.action.VIEW
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:56:17-69
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:49:17-69
 	android:name
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:56:25-66
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:49:25-66
 category#android.intent.category.DEFAULT
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:57:17-76
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:17-76
 	android:name
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:57:27-73
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:50:27-73
 category#android.intent.category.BROWSABLE
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:58:17-78
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:17-78
 	android:name
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:58:27-75
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:51:27-75
 data
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:61:17-47
-	android:host
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:103:45-61
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:17-47
 	android:scheme
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:61:23-44
-	android:pathPattern
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:73:23-53
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:52:23-44
 	android:mimeType
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:63:23-49
-intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:pathPattern:.*\\.3gp+data:pathPattern:.*\\.avi+data:pathPattern:.*\\.flv+data:pathPattern:.*\\.m3u8+data:pathPattern:.*\\.mkv+data:pathPattern:.*\\.mov+data:pathPattern:.*\\.mp4+data:pathPattern:.*\\.ts+data:pathPattern:.*\\.webm+data:pathPattern:.*\\.wmv+data:scheme:http+data:scheme:https
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:66:13-83:29
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:55:23-49
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:http+data:scheme:https
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:59:13-65:29
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:mimeType:application/vnd.apple.mpegurl+data:mimeType:application/x-mpegURL+data:scheme:http+data:scheme:https
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:86:13-95:29
-intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:*+data:host:*+data:mimeType:video/*+data:mimeType:video/3gpp+data:mimeType:video/avi+data:mimeType:video/mp4+data:mimeType:video/quicktime+data:mimeType:video/webm+data:mimeType:video/x-flv+data:mimeType:video/x-matroska+data:mimeType:video/x-ms-wmv+data:scheme:http+data:scheme:https
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:98:13-114:29
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:68:13-76:29
 intent-filter#action:name:android.intent.action.SEND+category:name:android.intent.category.DEFAULT+data:mimeType:text/plain
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:117:13-121:29
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:79:13-83:29
 action#android.intent.action.SEND
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:118:17-69
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:80:17-69
 	android:name
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:118:25-66
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:80:25-66
 intent-filter#action:name:android.intent.action.SEND+category:name:android.intent.category.DEFAULT+data:mimeType:video/*
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:124:13-128:29
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:86:13-90:29
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:magnet
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:131:13-136:29
-intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.DEFAULT+data:mimeType:video/*+data:scheme:content
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:139:13-144:29
-activity#com.meowplay.tv.ui.SettingsActivity
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:148:9-151:58
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:93:13-98:29
+activity#com.meowplay.tv.ui.HistoryActivity
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:102:9-105:58
 	android:parentActivityName
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:151:13-55
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:105:13-55
 	android:exported
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:150:13-37
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:104:13-37
 	android:name
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:149:13-48
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:103:13-47
 activity#com.meowplay.tv.ui.PasteLinkActivity
-ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:154:9-158:60
+ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:108:9-111:58
 	android:parentActivityName
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:157:13-55
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:111:13-55
 	android:exported
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:156:13-37
-	android:theme
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:158:13-57
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:110:13-37
 	android:name
-		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:155:13-49
+		ADDED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml:109:13-49
 uses-sdk
 INJECTED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/z/my-project/download/MeowPlay/app/src/main/AndroidManifest.xml
@@ -290,18 +263,16 @@ MERGED from [androidx.databinding:viewbinding:8.2.2] /home/z/.gradle/caches/tran
 MERGED from [androidx.databinding:viewbinding:8.2.2] /home/z/.gradle/caches/transforms-3/cd7033bdba3c138446569f308066241e/transformed/viewbinding-8.2.2/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.material:material:1.11.0] /home/z/.gradle/caches/transforms-3/cac83076d76b42ce7a57dce6976e60b0/transformed/material-1.11.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.11.0] /home/z/.gradle/caches/transforms-3/cac83076d76b42ce7a57dce6976e60b0/transformed/material-1.11.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/z/.gradle/caches/transforms-3/57b4b9083cd9037ee5d1cd7ce1f14350/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/z/.gradle/caches/transforms-3/57b4b9083cd9037ee5d1cd7ce1f14350/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.leanback:leanback-preference:1.0.0] /home/z/.gradle/caches/transforms-3/0cacf6748a367e78736ac2982745aebe/transformed/leanback-preference-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.leanback:leanback-preference:1.0.0] /home/z/.gradle/caches/transforms-3/0cacf6748a367e78736ac2982745aebe/transformed/leanback-preference-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/z/.gradle/caches/transforms-3/3bd65c883a3780210bdf89bcd9caf597/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/z/.gradle/caches/transforms-3/3bd65c883a3780210bdf89bcd9caf597/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.preference:preference-ktx:1.2.1] /home/z/.gradle/caches/transforms-3/85d20f5315390e5843ca07274e4b7582/transformed/preference-ktx-1.2.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.preference:preference-ktx:1.2.1] /home/z/.gradle/caches/transforms-3/85d20f5315390e5843ca07274e4b7582/transformed/preference-ktx-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/z/.gradle/caches/transforms-3/d12c9f35034cd66f65318ddfef3adbff/transformed/constraintlayout-2.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/z/.gradle/caches/transforms-3/d12c9f35034cd66f65318ddfef3adbff/transformed/constraintlayout-2.0.1/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.legacy:legacy-preference-v14:1.0.0] /home/z/.gradle/caches/transforms-3/73124720769e04ab97ff0e1fef9533b6/transformed/legacy-preference-v14-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-preference-v14:1.0.0] /home/z/.gradle/caches/transforms-3/73124720769e04ab97ff0e1fef9533b6/transformed/legacy-preference-v14-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.preference:preference:1.2.1] /home/z/.gradle/caches/transforms-3/cdfd712cbaa951128fdf17cf287d879a/transformed/preference-1.2.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.preference:preference:1.2.1] /home/z/.gradle/caches/transforms-3/cdfd712cbaa951128fdf17cf287d879a/transformed/preference-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.preference:preference:1.0.0] /home/z/.gradle/caches/transforms-3/27505173dec19c455d8adbcf7170edbc/transformed/preference-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.preference:preference:1.0.0] /home/z/.gradle/caches/transforms-3/27505173dec19c455d8adbcf7170edbc/transformed/preference-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.6.1] /home/z/.gradle/caches/transforms-3/5c5f7c6de7640bef4d5fdbb070566b52/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.6.1] /home/z/.gradle/caches/transforms-3/5c5f7c6de7640bef4d5fdbb070566b52/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.leanback:leanback:1.0.0] /home/z/.gradle/caches/transforms-3/a8e8a16452b315a278d04f75c8fa156f/transformed/leanback-1.0.0/AndroidManifest.xml:20:5-44
@@ -318,8 +289,6 @@ MERGED from [androidx.activity:activity-ktx:1.8.2] /home/z/.gradle/caches/transf
 MERGED from [androidx.activity:activity-ktx:1.8.2] /home/z/.gradle/caches/transforms-3/904b63528a5c0793d2b6fe10e89097a6/transformed/activity-ktx-1.8.2/AndroidManifest.xml:5:5-44
 MERGED from [androidx.media3:media3-datasource-okhttp:1.3.0] /home/z/.gradle/caches/transforms-3/74e36d5571a37030e8a11decf5f12d0b/transformed/media3-datasource-okhttp-1.3.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.media3:media3-datasource-okhttp:1.3.0] /home/z/.gradle/caches/transforms-3/74e36d5571a37030e8a11decf5f12d0b/transformed/media3-datasource-okhttp-1.3.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.media3:media3-session:1.3.0] /home/z/.gradle/caches/transforms-3/313a43e87180fe31244f4a31d716de4b/transformed/media3-session-1.3.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.media3:media3-session:1.3.0] /home/z/.gradle/caches/transforms-3/313a43e87180fe31244f4a31d716de4b/transformed/media3-session-1.3.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.media3:media3-datasource:1.3.0] /home/z/.gradle/caches/transforms-3/9bcf744a0bd31b7140ca3ea0e70340ac/transformed/media3-datasource-1.3.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.media3:media3-datasource:1.3.0] /home/z/.gradle/caches/transforms-3/9bcf744a0bd31b7140ca3ea0e70340ac/transformed/media3-datasource-1.3.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.media3:media3-ui:1.3.0] /home/z/.gradle/caches/transforms-3/2c2416b3b28a2397816e2240984535d8/transformed/media3-ui-1.3.0/AndroidManifest.xml:20:5-44
@@ -354,6 +323,8 @@ MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/z/.gradle
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/z/.gradle/caches/transforms-3/2a59d275ade8115707c51800d3b23d3d/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/z/.gradle/caches/transforms-3/319c3da21ef6892808972c6722ccaffb/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/z/.gradle/caches/transforms-3/319c3da21ef6892808972c6722ccaffb/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] /home/z/.gradle/caches/transforms-3/fa410d01724addcdeb2a94f03df651f6/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /home/z/.gradle/caches/transforms-3/fa410d01724addcdeb2a94f03df651f6/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/z/.gradle/caches/transforms-3/de2e10411dfc142daa4759e08703bff2/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/z/.gradle/caches/transforms-3/de2e10411dfc142daa4759e08703bff2/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/z/.gradle/caches/transforms-3/d34b4aa699b6277c5f0cb61232e8031b/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
@@ -368,18 +339,14 @@ MERGED from [androidx.loader:loader:1.0.0] /home/z/.gradle/caches/transforms-3/9
 MERGED from [androidx.loader:loader:1.0.0] /home/z/.gradle/caches/transforms-3/97c557398ba91b3cdfce3b60ea5202f8/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/z/.gradle/caches/transforms-3/867cc628b3b432b8976b9fe747141c66/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/z/.gradle/caches/transforms-3/867cc628b3b432b8976b9fe747141c66/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /home/z/.gradle/caches/transforms-3/61e841b3b0327f553108e38a1b6a2f2e/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /home/z/.gradle/caches/transforms-3/61e841b3b0327f553108e38a1b6a2f2e/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/z/.gradle/caches/transforms-3/de20669937f68aa8797c4680ba80b49c/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/z/.gradle/caches/transforms-3/de20669937f68aa8797c4680ba80b49c/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.1.0] /home/z/.gradle/caches/transforms-3/870c56e08d118c9344f581b3a97a590d/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.customview:customview:1.1.0] /home/z/.gradle/caches/transforms-3/870c56e08d118c9344f581b3a97a590d/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/z/.gradle/caches/transforms-3/3b5bf6890215a6b6e31cad5967d2eff6/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/z/.gradle/caches/transforms-3/3b5bf6890215a6b6e31cad5967d2eff6/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/z/.gradle/caches/transforms-3/6966dfcb044a26064e73419f48e0ed02/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/z/.gradle/caches/transforms-3/6966dfcb044a26064e73419f48e0ed02/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.transition:transition:1.4.1] /home/z/.gradle/caches/transforms-3/32de66921ec4960ec68de9bf512fce67/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.transition:transition:1.4.1] /home/z/.gradle/caches/transforms-3/32de66921ec4960ec68de9bf512fce67/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.window:window:1.0.0] /home/z/.gradle/caches/transforms-3/8db6ed26f395c1f8973398108f107018/transformed/window-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.window:window:1.0.0] /home/z/.gradle/caches/transforms-3/8db6ed26f395c1f8973398108f107018/transformed/window-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.12.0] /home/z/.gradle/caches/transforms-3/05365192e8c93a127ae620124358980f/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.12.0] /home/z/.gradle/caches/transforms-3/05365192e8c93a127ae620124358980f/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /home/z/.gradle/caches/transforms-3/e212d6daf7437ae4cee342febb5553a2/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
@@ -392,14 +359,14 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/z/.gradle/caches/
 MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/z/.gradle/caches/transforms-3/b5aa617bebe5bc4c2ae6066dd8ccfdbb/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:21:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] /home/z/.gradle/caches/transforms-3/d967a84d41ba3aa022a0892df2e835c1/transformed/lifecycle-livedata-2.7.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] /home/z/.gradle/caches/transforms-3/d967a84d41ba3aa022a0892df2e835c1/transformed/lifecycle-livedata-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] /home/z/.gradle/caches/transforms-3/bb15a68eaa27a702c74c411b29cd3dab/transformed/lifecycle-viewmodel-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] /home/z/.gradle/caches/transforms-3/bb15a68eaa27a702c74c411b29cd3dab/transformed/lifecycle-viewmodel-ktx-2.7.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /home/z/.gradle/caches/transforms-3/27fffcffbc8070378c9ce31fe8f59dec/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /home/z/.gradle/caches/transforms-3/27fffcffbc8070378c9ce31fe8f59dec/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] /home/z/.gradle/caches/transforms-3/d64b0c791d6e535a5ddaa802b13ee659/transformed/lifecycle-livedata-core-ktx-2.7.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] /home/z/.gradle/caches/transforms-3/d64b0c791d6e535a5ddaa802b13ee659/transformed/lifecycle-livedata-core-ktx-2.7.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /home/z/.gradle/caches/transforms-3/56a17571f823274c2af15e7dde5c3b9a/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /home/z/.gradle/caches/transforms-3/56a17571f823274c2af15e7dde5c3b9a/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] /home/z/.gradle/caches/transforms-3/bb15a68eaa27a702c74c411b29cd3dab/transformed/lifecycle-viewmodel-ktx-2.7.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] /home/z/.gradle/caches/transforms-3/bb15a68eaa27a702c74c411b29cd3dab/transformed/lifecycle-viewmodel-ktx-2.7.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] /home/z/.gradle/caches/transforms-3/4aae9911e679b41eaa6b5a36e359b947/transformed/lifecycle-runtime-ktx-2.7.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] /home/z/.gradle/caches/transforms-3/4aae9911e679b41eaa6b5a36e359b947/transformed/lifecycle-runtime-ktx-2.7.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.7.0] /home/z/.gradle/caches/transforms-3/7e0d1575f1044c6e0b915eace251405b/transformed/lifecycle-livedata-ktx-2.7.0/AndroidManifest.xml:5:5-44
@@ -470,18 +437,6 @@ ADDED from [androidx.emoji2:emoji2:1.2.0] /home/z/.gradle/caches/transforms-3/70
 		ADDED from [androidx.emoji2:emoji2:1.2.0] /home/z/.gradle/caches/transforms-3/70da4e4e1388184bab94ea674e68fd8f/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
 	android:name
 		ADDED from [androidx.emoji2:emoji2:1.2.0] /home/z/.gradle/caches/transforms-3/70da4e4e1388184bab94ea674e68fd8f/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
-uses-library#androidx.window.extensions
-ADDED from [androidx.window:window:1.0.0] /home/z/.gradle/caches/transforms-3/8db6ed26f395c1f8973398108f107018/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
-	android:required
-		ADDED from [androidx.window:window:1.0.0] /home/z/.gradle/caches/transforms-3/8db6ed26f395c1f8973398108f107018/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
-	android:name
-		ADDED from [androidx.window:window:1.0.0] /home/z/.gradle/caches/transforms-3/8db6ed26f395c1f8973398108f107018/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
-uses-library#androidx.window.sidecar
-ADDED from [androidx.window:window:1.0.0] /home/z/.gradle/caches/transforms-3/8db6ed26f395c1f8973398108f107018/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
-	android:required
-		ADDED from [androidx.window:window:1.0.0] /home/z/.gradle/caches/transforms-3/8db6ed26f395c1f8973398108f107018/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
-	android:name
-		ADDED from [androidx.window:window:1.0.0] /home/z/.gradle/caches/transforms-3/8db6ed26f395c1f8973398108f107018/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
 permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.12.0] /home/z/.gradle/caches/transforms-3/05365192e8c93a127ae620124358980f/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
 	android:protectionLevel

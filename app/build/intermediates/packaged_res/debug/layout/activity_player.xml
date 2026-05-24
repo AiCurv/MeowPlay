@@ -4,32 +4,28 @@
     android:layout_height="match_parent"
     android:background="@android:color/black">
 
-    <!-- Player View -->
     <androidx.media3.ui.PlayerView
         android:id="@+id/player_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/black" />
 
-    <!-- Loading Indicator -->
     <ProgressBar
         android:id="@+id/loading_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:visibility="gone"
-        android:indeterminateTint="@color/accent_purple" />
+        android:indeterminateTint="#BB86FC" />
 
-    <!-- Error Text -->
     <TextView
         android:id="@+id/error_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textColor="@color/error_red"
+        android:textColor="#CF6679"
         android:textSize="18sp"
         android:visibility="gone"
-        android:padding="16dp"
-        android:background="#88000000" />
-
+        android:padding="24dp"
+        android:background="#CC000000" />
 </FrameLayout>
