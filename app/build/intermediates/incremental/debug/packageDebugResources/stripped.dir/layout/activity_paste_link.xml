@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_dark"
+    android:padding="24dp"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paste Video Link"
+        android:textColor="@color/text_primary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/paste_url_input"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:hint="Paste URL here..."
+        android:textColorHint="@color/text_hint"
+        android:textColor="@color/text_primary"
+        android:background="@drawable/bg_input"
+        android:padding="12dp"
+        android:singleLine="true"
+        android:imeOptions="actionGo"
+        android:inputType="textUri"
+        android:layout_marginBottom="16dp" />
+
+    <ImageView
+        android:id="@+id/paste_play_button"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/ic_play"
+        android:padding="12dp"
+        android:background="@drawable/bg_button_primary"
+        android:contentDescription="Play"
+        android:focusable="true" />
+
+</LinearLayout>

@@ -60,6 +60,9 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.preference:preference-ktx:1.2.1")
 
+    // Material Components (required for theme)
+    implementation("com.google.android.material:material:1.11.0")
+
     // Android TV Leanback
     implementation("androidx.leanback:leanback:1.0.0")
     implementation("androidx.leanback:leanback-preference:1.0.0")
