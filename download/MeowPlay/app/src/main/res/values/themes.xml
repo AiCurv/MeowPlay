@@ -1,30 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Main App Theme (Dark, optimized for TV) -->
-    <style name="Theme.MeowPlay" parent="Theme.MaterialComponents.NoActionBar">
+    <style name="Theme.MeowPlay" parent="Theme.Leanback">
         <item name="colorPrimary">@color/accent_purple</item>
-        <item name="colorPrimaryDark">@color/accent_purple_dark</item>
         <item name="colorAccent">@color/accent_purple</item>
-        <item name="colorSurface">@color/surface_dark</item>
         <item name="android:colorBackground">@color/background_dark</item>
         <item name="android:windowBackground">@color/background_dark</item>
-        <item name="android:statusBarColor">@color/background_dark</item>
-        <item name="android:navigationBarColor">@color/background_dark</item>
-        <item name="android:windowFullscreen">true</item>
     </style>
-
-    <!-- Player Theme (Full screen, no system UI) -->
-    <style name="Theme.MeowPlay.Player" parent="Theme.MeowPlay">
+    <style name="Theme.MeowPlay.Player" parent="Theme.Leanback">
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowContentOverlay">@null</item>
-        <item name="android:windowBackground">@color/black</item>
-    </style>
-
-    <!-- Dialog Theme -->
-    <style name="Theme.MeowPlay.Dialog" parent="Theme.MaterialComponents.Dialog">
-        <item name="colorPrimary">@color/accent_purple</item>
-        <item name="colorAccent">@color/accent_purple</item>
-        <item name="android:windowBackground">@color/surface_dark</item>
-        <item name="android:background">@color/surface_dark</item>
+        <item name="android:windowBackground">@android:color/black</item>
     </style>
 </resources>

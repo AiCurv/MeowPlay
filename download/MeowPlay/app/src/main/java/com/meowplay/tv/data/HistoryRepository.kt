@@ -4,123 +4,42 @@ import android.content.Context
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-/**
- * Repository for history data. Handles all CRUD operations
- * and provides clean APIs for the UI layer.
- */
-class HistoryRepository private constructor(context: Context) {
+class HistoryRepository private constructor(ctx: Context) {
+    private val dao = AppDatabase.getInstance(ctx).historyDao()
 
-    private val historyDao: HistoryDao = AppDatabase.getInstance(context).historyDao()
+    fun observeAll() = dao.getAllHistory()
+    fun search(q: String) = dao.searchHistory(q)
 
-    /** Observe all history entries (sorted by last played) */
-    fun observeAllHistory() = historyDao.getAllHistory()
-
-    /** Search history by title or URL */
-    fun searchHistory(query: String) = historyDao.searchHistory(query)
-
-    /** Get all history synchronously */
-    suspend fun getAllHistory() = historyDao.getAllHistorySync()
-
-    /** Add or update a history entry. If URL exists, increments play count. */
-    suspend fun addOrUpdateEntry(
-        url: String,
-        title: String? = null,
-        sourceApp: String? = null,
-        mimeType: String? = null,
-        thumbnailUrl: String? = null
-    ) {
+    suspend fun addOrUpdateEntry(url: String, title: String? = null, sourceApp: String? = null, mimeType: String? = null) {
         withContext(Dispatchers.IO) {
-            val existing = historyDao.getByUrl(url)
+            val existing = dao.getByUrl(url)
             if (existing != null) {
-                // Update existing entry
-                val updated = existing.copy(
+                dao.update(existing.copy(
                     title = title ?: existing.title,
                     sourceApp = sourceApp ?: existing.sourceApp,
                     mimeType = mimeType ?: existing.mimeType,
-                    thumbnailUrl = thumbnailUrl ?: existing.thumbnailUrl,
                     lastPlayedAt = System.currentTimeMillis(),
                     playCount = existing.playCount + 1
-                )
-                historyDao.update(updated)
+                ))
             } else {
-                // Create new entry
-                val entry = HistoryEntry(
-                    url = url,
-                    title = title ?: extractTitleFromUrl(url),
-                    sourceApp = sourceApp,
-                    mimeType = mimeType,
-                    thumbnailUrl = thumbnailUrl
-                )
-                historyDao.insert(entry)
+                dao.insert(HistoryEntry(url = url, title = title ?: extractTitle(url), sourceApp = sourceApp, mimeType = mimeType))
             }
         }
     }
 
-    /** Update playback position for resume feature */
-    suspend fun updatePosition(url: String, position: Long) {
-        withContext(Dispatchers.IO) {
-            historyDao.updatePosition(url, position)
-        }
-    }
+    suspend fun updatePosition(url: String, position: Long) = withContext(Dispatchers.IO) { dao.updatePosition(url, position) }
+    suspend fun delete(entry: HistoryEntry) = withContext(Dispatchers.IO) { dao.delete(entry) }
+    suspend fun clearAll() = withContext(Dispatchers.IO) { dao.deleteAll() }
+    suspend fun getByUrl(url: String) = withContext(Dispatchers.IO) { dao.getByUrl(url) }
 
-    /** Update duration when known */
-    suspend fun updateDuration(url: String, duration: Long) {
-        withContext(Dispatchers.IO) {
-            val existing = historyDao.getByUrl(url)
-            if (existing != null) {
-                historyDao.update(existing.copy(duration = duration))
-            }
-        }
-    }
-
-    /** Delete a single history entry */
-    suspend fun deleteEntry(entry: HistoryEntry) {
-        withContext(Dispatchers.IO) {
-            historyDao.delete(entry)
-        }
-    }
-
-    /** Delete entry by ID */
-    suspend fun deleteById(id: Long) {
-        withContext(Dispatchers.IO) {
-            historyDao.deleteById(id)
-        }
-    }
-
-    /** Clear all history */
-    suspend fun clearAll() {
-        withContext(Dispatchers.IO) {
-            historyDao.deleteAll()
-        }
-    }
-
-    /** Get entry by URL for resume playback */
-    suspend fun getByUrl(url: String): HistoryEntry? {
-        return withContext(Dispatchers.IO) {
-            historyDao.getByUrl(url)
-        }
-    }
-
-    private fun extractTitleFromUrl(url: String): String {
-        return try {
-            val path = url.substringAfterLast("/")
-            val withoutExt = path.substringBeforeLast(".")
-            withoutExt.replace("_", " ").replace("-", " ").take(50)
-        } catch (e: Exception) {
-            url.take(50)
-        }
-    }
+    private fun extractTitle(url: String): String = try {
+        url.substringAfterLast("/").substringBeforeLast(".").replace("_", " ").replace("-", " ").take(50)
+    } catch (_: Exception) { url.take(50) }
 
     companion object {
-        @Volatile
-        private var INSTANCE: HistoryRepository? = null
-
-        fun getInstance(context: Context): HistoryRepository {
-            return INSTANCE ?: synchronized(this) {
-                val instance = HistoryRepository(context.applicationContext)
-                INSTANCE = instance
-                instance
-            }
+        @Volatile private var INSTANCE: HistoryRepository? = null
+        fun getInstance(ctx: Context): HistoryRepository = INSTANCE ?: synchronized(this) {
+            HistoryRepository(ctx.applicationContext).also { INSTANCE = it }
         }
     }
 }

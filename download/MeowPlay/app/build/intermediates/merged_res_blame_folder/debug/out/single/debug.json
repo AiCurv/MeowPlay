@@ -1,122 +1,70 @@
 [
     {
-        "merged": "com.meowplay.tv.app-merged_res-53:/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "com.meowplay.tv.app-main-55:/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "com.meowplay.tv.app-merged_res-49:/drawable_bg_btn_primary.xml.flat",
+        "source": "com.meowplay.tv.app-main-51:/drawable/bg_btn_primary.xml"
     },
     {
-        "merged": "com.meowplay.tv.app-merged_res-53:/drawable_bg_button_danger.xml.flat",
-        "source": "com.meowplay.tv.app-main-55:/drawable/bg_button_danger.xml"
+        "merged": "com.meowplay.tv.app-merged_res-49:/layout_activity_main.xml.flat",
+        "source": "com.meowplay.tv.app-main-51:/layout/activity_main.xml"
     },
     {
-        "merged": "com.meowplay.tv.app-merged_res-53:/drawable_bg_button_primary.xml.flat",
-        "source": "com.meowplay.tv.app-main-55:/drawable/bg_button_primary.xml"
+        "merged": "com.meowplay.tv.app-merged_res-49:/drawable_bg_input_focus.xml.flat",
+        "source": "com.meowplay.tv.app-main-51:/drawable/bg_input_focus.xml"
     },
     {
-        "merged": "com.meowplay.tv.app-merged_res-53:/drawable_ic_history.xml.flat",
-        "source": "com.meowplay.tv.app-main-55:/drawable/ic_history.xml"
+        "merged": "com.meowplay.tv.app-merged_res-49:/drawable_bg_btn_focus.xml.flat",
+        "source": "com.meowplay.tv.app-main-51:/drawable/bg_btn_focus.xml"
     },
     {
-        "merged": "com.meowplay.tv.app-merged_res-53:/drawable_app_banner.png.flat",
-        "source": "com.meowplay.tv.app-main-55:/drawable/app_banner.png"
+        "merged": "com.meowplay.tv.app-merged_res-49:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.meowplay.tv.app-main-51:/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "com.meowplay.tv.app-merged_res-53:/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "com.meowplay.tv.app-main-55:/mipmap-xxxhdpi/ic_launcher.png"
+        "merged": "com.meowplay.tv.app-merged_res-49:/drawable_ic_delete.xml.flat",
+        "source": "com.meowplay.tv.app-main-51:/drawable/ic_delete.xml"
     },
     {
-        "merged": "com.meowplay.tv.app-merged_res-53:/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "com.meowplay.tv.app-main-55:/mipmap-xhdpi/ic_launcher.png"
+        "merged": "com.meowplay.tv.app-merged_res-49:/drawable_app_banner.png.flat",
+        "source": "com.meowplay.tv.app-main-51:/drawable/app_banner.png"
     },
     {
-        "merged": "com.meowplay.tv.app-merged_res-53:/layout_fragment_browse.xml.flat",
-        "source": "com.meowplay.tv.app-main-55:/layout/fragment_browse.xml"
+        "merged": "com.meowplay.tv.app-merged_res-49:/layout_activity_history.xml.flat",
+        "source": "com.meowplay.tv.app-main-51:/layout/activity_history.xml"
     },
     {
-        "merged": "com.meowplay.tv.app-merged_res-53:/drawable_bg_input.xml.flat",
-        "source": "com.meowplay.tv.app-main-55:/drawable/bg_input.xml"
+        "merged": "com.meowplay.tv.app-merged_res-49:/layout_activity_paste_link.xml.flat",
+        "source": "com.meowplay.tv.app-main-51:/layout/activity_paste_link.xml"
     },
     {
-        "merged": "com.meowplay.tv.app-merged_res-53:/drawable_bg_history_item.xml.flat",
-        "source": "com.meowplay.tv.app-main-55:/drawable/bg_history_item.xml"
+        "merged": "com.meowplay.tv.app-merged_res-49:/layout_activity_player.xml.flat",
+        "source": "com.meowplay.tv.app-main-51:/layout/activity_player.xml"
     },
     {
-        "merged": "com.meowplay.tv.app-merged_res-53:/layout_fragment_history.xml.flat",
-        "source": "com.meowplay.tv.app-main-55:/layout/fragment_history.xml"
+        "merged": "com.meowplay.tv.app-merged_res-49:/layout_item_history.xml.flat",
+        "source": "com.meowplay.tv.app-main-51:/layout/item_history.xml"
     },
     {
-        "merged": "com.meowplay.tv.app-merged_res-53:/layout_activity_player.xml.flat",
-        "source": "com.meowplay.tv.app-main-55:/layout/activity_player.xml"
+        "merged": "com.meowplay.tv.app-merged_res-49:/drawable_bg_icon_focus.xml.flat",
+        "source": "com.meowplay.tv.app-main-51:/drawable/bg_icon_focus.xml"
     },
     {
-        "merged": "com.meowplay.tv.app-merged_res-53:/layout_item_history.xml.flat",
-        "source": "com.meowplay.tv.app-main-55:/layout/item_history.xml"
+        "merged": "com.meowplay.tv.app-merged_res-49:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.meowplay.tv.app-main-51:/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "com.meowplay.tv.app-merged_res-53:/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "com.meowplay.tv.app-main-55:/mipmap-hdpi/ic_launcher.png"
+        "merged": "com.meowplay.tv.app-merged_res-49:/drawable_ic_copy.xml.flat",
+        "source": "com.meowplay.tv.app-main-51:/drawable/ic_copy.xml"
     },
     {
-        "merged": "com.meowplay.tv.app-merged_res-53:/drawable_ic_settings.xml.flat",
-        "source": "com.meowplay.tv.app-main-55:/drawable/ic_settings.xml"
+        "merged": "com.meowplay.tv.app-merged_res-49:/drawable_bg_item_focus.xml.flat",
+        "source": "com.meowplay.tv.app-main-51:/drawable/bg_item_focus.xml"
     },
     {
-        "merged": "com.meowplay.tv.app-merged_res-53:/xml_preferences.xml.flat",
-        "source": "com.meowplay.tv.app-main-55:/xml/preferences.xml"
+        "merged": "com.meowplay.tv.app-merged_res-49:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.meowplay.tv.app-main-51:/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "com.meowplay.tv.app-merged_res-53:/layout_fragment_settings.xml.flat",
-        "source": "com.meowplay.tv.app-main-55:/layout/fragment_settings.xml"
-    },
-    {
-        "merged": "com.meowplay.tv.app-merged_res-53:/drawable_ic_home.xml.flat",
-        "source": "com.meowplay.tv.app-main-55:/drawable/ic_home.xml"
-    },
-    {
-        "merged": "com.meowplay.tv.app-merged_res-53:/drawable_ic_search.xml.flat",
-        "source": "com.meowplay.tv.app-main-55:/drawable/ic_search.xml"
-    },
-    {
-        "merged": "com.meowplay.tv.app-merged_res-53:/drawable_ic_delete_all.xml.flat",
-        "source": "com.meowplay.tv.app-main-55:/drawable/ic_delete_all.xml"
-    },
-    {
-        "merged": "com.meowplay.tv.app-merged_res-53:/layout_activity_main.xml.flat",
-        "source": "com.meowplay.tv.app-main-55:/layout/activity_main.xml"
-    },
-    {
-        "merged": "com.meowplay.tv.app-merged_res-53:/drawable_bg_icon_button.xml.flat",
-        "source": "com.meowplay.tv.app-main-55:/drawable/bg_icon_button.xml"
-    },
-    {
-        "merged": "com.meowplay.tv.app-merged_res-53:/layout_activity_settings.xml.flat",
-        "source": "com.meowplay.tv.app-main-55:/layout/activity_settings.xml"
-    },
-    {
-        "merged": "com.meowplay.tv.app-merged_res-53:/drawable_ic_copy.xml.flat",
-        "source": "com.meowplay.tv.app-main-55:/drawable/ic_copy.xml"
-    },
-    {
-        "merged": "com.meowplay.tv.app-merged_res-53:/drawable_bg_settings_row.xml.flat",
-        "source": "com.meowplay.tv.app-main-55:/drawable/bg_settings_row.xml"
-    },
-    {
-        "merged": "com.meowplay.tv.app-merged_res-53:/layout_activity_paste_link.xml.flat",
-        "source": "com.meowplay.tv.app-main-55:/layout/activity_paste_link.xml"
-    },
-    {
-        "merged": "com.meowplay.tv.app-merged_res-53:/layout_fragment_home.xml.flat",
-        "source": "com.meowplay.tv.app-main-55:/layout/fragment_home.xml"
-    },
-    {
-        "merged": "com.meowplay.tv.app-merged_res-53:/drawable_ic_browse.xml.flat",
-        "source": "com.meowplay.tv.app-main-55:/drawable/ic_browse.xml"
-    },
-    {
-        "merged": "com.meowplay.tv.app-merged_res-53:/drawable_ic_delete.xml.flat",
-        "source": "com.meowplay.tv.app-main-55:/drawable/ic_delete.xml"
-    },
-    {
-        "merged": "com.meowplay.tv.app-merged_res-53:/drawable_ic_play.xml.flat",
-        "source": "com.meowplay.tv.app-main-55:/drawable/ic_play.xml"
+        "merged": "com.meowplay.tv.app-merged_res-49:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.meowplay.tv.app-main-51:/mipmap-xxhdpi/ic_launcher.png"
     }
 ]

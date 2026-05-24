@@ -4,8 +4,8 @@ package com.meowplay.tv.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,15 +21,19 @@ public final class ActivityPasteLinkBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final ImageView pastePlayButton;
+  public final Button backBtn;
+
+  @NonNull
+  public final Button pastePlayBtn;
 
   @NonNull
   public final EditText pasteUrlInput;
 
-  private ActivityPasteLinkBinding(@NonNull LinearLayout rootView,
-      @NonNull ImageView pastePlayButton, @NonNull EditText pasteUrlInput) {
+  private ActivityPasteLinkBinding(@NonNull LinearLayout rootView, @NonNull Button backBtn,
+      @NonNull Button pastePlayBtn, @NonNull EditText pasteUrlInput) {
     this.rootView = rootView;
-    this.pastePlayButton = pastePlayButton;
+    this.backBtn = backBtn;
+    this.pastePlayBtn = pastePlayBtn;
     this.pasteUrlInput = pasteUrlInput;
   }
 
@@ -60,9 +64,15 @@ public final class ActivityPasteLinkBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.paste_play_button;
-      ImageView pastePlayButton = ViewBindings.findChildViewById(rootView, id);
-      if (pastePlayButton == null) {
+      id = R.id.back_btn;
+      Button backBtn = ViewBindings.findChildViewById(rootView, id);
+      if (backBtn == null) {
+        break missingId;
+      }
+
+      id = R.id.paste_play_btn;
+      Button pastePlayBtn = ViewBindings.findChildViewById(rootView, id);
+      if (pastePlayBtn == null) {
         break missingId;
       }
 
@@ -72,7 +82,8 @@ public final class ActivityPasteLinkBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityPasteLinkBinding((LinearLayout) rootView, pastePlayButton, pasteUrlInput);
+      return new ActivityPasteLinkBinding((LinearLayout) rootView, backBtn, pastePlayBtn,
+          pasteUrlInput);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
