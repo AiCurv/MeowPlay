@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- MeowPlay Brand Colors -->
+    <color name="accent_purple">#BB86FC</color>
+    <color name="accent_purple_light">#D4AAFF</color>
+    <color name="accent_purple_dark">#7C4DFF</color>
+
+    <!-- Background -->
+    <color name="background_dark">#121212</color>
+    <color name="surface_dark">#1E1E1E</color>
+    <color name="surface_light">#2D2D2D</color>
+
+    <!-- Text -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B0B0B0</color>
+    <color name="text_hint">#808080</color>
+
+    <!-- Status -->
+    <color name="error_red">#CF6679</color>
+    <color name="success_green">#66BB6A</color>
+    <color name="warning_yellow">#FFD54F</color>
+
+    <!-- Player -->
+    <color name="player_background">#000000</color>
+    <color name="player_controls">#B3000000</color>
+
+    <!-- Default -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+</resources>

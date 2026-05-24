@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android TV banner (required for Leanback launcher) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="180dp"
+    android:viewportWidth="320"
+    android:viewportHeight="180">
+    <!-- Background gradient (simulated) -->
+    <path
+        android:fillColor="#1A1A2E"
+        android:pathData="M0,0h320v180H0z" />
+    <path
+        android:fillColor="#6C3FC5"
+        android:pathData="M0,0h320v90H0z" />
+    <path
+        android:fillColor="#1A1A2E"
+        android:pathData="M0,90h320v90H0z" />
+    <!-- Play button triangle -->
+    <path
+        android:fillColor="#BB86FC"
+        android:pathData="M130,50 L190,90 L130,130 Z" />
+    <!-- Cat ears (stylized) -->
+    <path
+        android:fillColor="#BB86FC"
+        android:pathData="M150,40 L160,20 L170,40 Z" />
+    <!-- App name -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M110,155 L110,145 L118,145 L118,155 Z M120,145 L120,155 L128,155 L128,145 Z" />
+</vector>
